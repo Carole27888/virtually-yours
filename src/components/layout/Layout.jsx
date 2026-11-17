@@ -3,6 +3,7 @@ import { Outlet, useLocation } from "react-router";
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
 import CtaBanner from "../sections/CtaBanner.jsx";
+import WhatsAppButton from "./WhatsAppButton.jsx";
 
 /** Scrolls to the top on page change, or to #anchor when the URL has one. */
 function ScrollManager() {
@@ -38,6 +39,7 @@ export default function Layout() {
       </main>
       {!hideCta && <CtaBanner />}
       <Footer />
+      <WhatsAppButton />
     </>
   );
 }

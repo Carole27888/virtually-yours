@@ -3,8 +3,8 @@ import { Clock, Globe, Mail, MapPin } from "lucide-react";
 import Logo from "../ui/Logo.jsx";
 import { Container } from "../ui/Section.jsx";
 import { SafeLink, Text } from "../ui/Placeholder.jsx";
-import { FacebookIcon, InstagramIcon, LinkedInIcon } from "../../lib/icons.jsx";
-import { AGENCY_NAME, footerNav, isPlaceholder, site } from "../../data/site.js";
+import { FacebookIcon, InstagramIcon, LinkedInIcon, WhatsAppIcon } from "../../lib/icons.jsx";
+import { AGENCY_NAME, footerNav, isPlaceholder, site, whatsappUrl } from "../../data/site.js";
 import { services } from "../../data/services.js";
 
 // Social links still set to a [PLACEHOLDER] are hidden when showPlaceholders is false.
@@ -49,6 +49,14 @@ export default function Footer() {
                   <Text>{site.email}</Text>
                 </SafeLink>
               </li>
+              {site.whatsapp?.number && (
+                <li className="flex items-center gap-2.5">
+                  <WhatsAppIcon className="size-4 text-accent-400" />
+                  <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" className="hover:text-accent-300">
+                    {site.whatsapp.display}
+                  </a>
+                </li>
+              )}
               <li className="flex items-center gap-2.5">
                 <MapPin className="size-4 text-accent-400" aria-hidden="true" />
                 {site.location}

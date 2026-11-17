@@ -29,6 +29,15 @@ export const site = {
     title: "Founder",
   },
 
+  // WhatsApp chat bubble (shown on every page).
+  // number: international format, digits only (no +, spaces or dashes).
+  // Set number to "" to hide the bubble.
+  whatsapp: {
+    number: "254795052260",
+    display: "+254 795 052 260",
+    message: `Hi ${AGENCY_NAME}, I'd like to know more about your services.`,
+  },
+
   // Calendly: paste your full scheduling link, e.g. https://calendly.com/your-name/discovery-call
   calendlyUrl: "[CALENDLY LINK]",
 
@@ -87,6 +96,10 @@ export const footerNav = {
     { label: "Terms of Service", href: "/terms" },
   ],
 };
+
+/** Link that opens a WhatsApp chat with the greeting pre-filled. */
+export const whatsappUrl = () =>
+  `https://wa.me/${site.whatsapp.number}?text=${encodeURIComponent(site.whatsapp.message)}`;
 
 /** True if a value is still an unreplaced [PLACEHOLDER]. */
 export const isPlaceholder = (value) =>

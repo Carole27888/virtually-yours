@@ -6,7 +6,8 @@ import { SafeLink, Text } from "../components/ui/Placeholder.jsx";
 import CalendlyEmbed from "../components/CalendlyEmbed.jsx";
 import ContactForm from "../components/forms/ContactForm.jsx";
 import { pageMeta } from "../lib/seo.js";
-import { isPlaceholder, site } from "../data/site.js";
+import { isPlaceholder, site, whatsappUrl } from "../data/site.js";
+import { WhatsAppIcon } from "../lib/icons.jsx";
 import { processSteps } from "../data/process.js";
 import { bookingSection, contactIntro } from "../data/contact.js";
 
@@ -64,6 +65,16 @@ export default function Contact() {
                   <Text>{site.email}</Text>
                 </SafeLink>
               </li>
+              {site.whatsapp?.number && (
+                <li className="flex items-center gap-3">
+                  <span className="icon-badge size-10">
+                    <WhatsAppIcon className="size-5" />
+                  </span>
+                  <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" className="font-medium text-ink-950 hover:text-accent-700">
+                    WhatsApp {site.whatsapp.display}
+                  </a>
+                </li>
+              )}
               <li className="flex items-center gap-3">
                 <span className="icon-badge size-10">
                   <MapPin className="size-5" aria-hidden="true" />
