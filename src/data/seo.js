@@ -2,7 +2,7 @@
  * SEO FOR FIXED PAGES
  * --------------------------------------------------------------
  * Title and meta description for each page. The agency name is
- * appended to titles automatically ("Pricing | Virtually Yours").
+ * appended to titles automatically ("Pricing | Virtually Handled Co.").
  *
  * Service, case study and blog pages build their SEO from their
  * own data entries, so you do not need to add them here.

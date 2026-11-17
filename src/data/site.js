@@ -9,15 +9,22 @@
  * placeholders until you replace them.
  */
 
-export const AGENCY_NAME = "Virtually Yours";
+export const AGENCY_NAME = "Virtually Handled Co.";
 
 export const site = {
   name: AGENCY_NAME,
   tagline: "Virtual assistants and digital services, managed for you",
   description: `${AGENCY_NAME} is a full-service virtual assistant and digital services agency. Trained, vetted and managed VAs and specialists for business owners who want their time back.`,
 
+  // Your logo, shown as-is in the header and footer and used as the favicon.
+  // Set showName to true if the image is a symbol only (no agency name in it).
+  logo: {
+    src: "/logo.png",
+    showName: false,
+  },
+
   // Your live domain, no trailing slash. Used for canonical URLs, Open Graph and sitemap.xml.
-  url: "https://www.example.com",
+  url: "https://virtuallyhandledco.com",
 
   email: "cmutemi27@gmail.com",
   location: "Nairobi, Kenya",

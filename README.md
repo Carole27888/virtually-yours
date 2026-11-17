@@ -85,11 +85,16 @@ Keep copy free of em dashes. Use a full stop, comma or colon instead.
 Open `src/data/site.js` and change one line:
 
 ```js
-export const AGENCY_NAME = "Virtually Yours";
+export const AGENCY_NAME = "Virtually Handled Co.";
 ```
 
-The logo, page titles, link previews, footer, About, Careers and legal pages all update.
-The logo mark uses the first letter of the name.
+The page titles, link previews, footer, About, Careers and legal pages all update.
+
+**Logo:** the site uses one file, `public/logo.png`, exactly as supplied (it is never
+recoloured). It appears in the header and footer and is the browser tab icon. To change the
+logo, replace that file with a new one of the same name. If your logo is a symbol without
+the agency name in it, set `logo.showName: true` in `src/data/site.js` and the name is
+printed beside it.
 
 Also update:
 - `name` in `package.json` (optional, not shown anywhere)
@@ -115,8 +120,8 @@ Lower numbers are lighter, higher numbers are darker.
 The design is intentionally flat: no gradients, glows or shadows. Cards are white on the
 off-white page with thin borders.
 
-Also update `theme-color` in `index.html` (the browser bar colour on phones), the colours
-in `public/favicon.svg`, and `primary_color` in `src/components/CalendlyEmbed.jsx`.
+Also update `theme-color` in `index.html` (the browser bar colour on phones) and
+`primary_color` in `src/components/CalendlyEmbed.jsx`.
 
 **Fonts** are self-hosted (no Google Fonts requests). To change them, install another
 [Fontsource](https://fontsource.org) font, for example `npm install @fontsource-variable/manrope`,
@@ -191,10 +196,10 @@ Every push to GitHub redeploys the site automatically.
   title and description for each link, even though they don't run JavaScript.
 - `sitemap.xml` and `robots.txt` are generated on every build from the data files, so new
   services, case studies and blog posts are added automatically. After launch, submit
-  `https://yourdomain.com/sitemap.xml` in
+  `https://virtuallyhandledco.com/sitemap.xml` in
   [Google Search Console](https://search.google.com/search-console).
-- The default share image is `public/og-image.png` (1200 x 630). Replace it with your own
-  branded image once you have a name and logo.
+- The default share image is `public/og-image.png` (1200 x 630). It currently shows the
+  agency name as text. Replace it with a version that includes your logo if you like.
 
 ---
 
@@ -236,12 +241,8 @@ These are still placeholders. Search the project for `[` to find them.
 
 **Also still to decide**
 
-- [ ] **Live domain:** `url` in `src/data/site.js` (currently `https://www.example.com`). The
-      sitemap, canonical URLs and link previews all use it.
 - [ ] **Legal review:** the Privacy Policy and Terms (`src/data/legal.js`) are filled in.
       Have a lawyer review them before launch.
-- [ ] **Share image (optional):** `public/og-image.png` uses the new name and colours with a
-      simple "V" mark. Replace it if you get a designed logo.
 
 **Hidden until you add real content**
 

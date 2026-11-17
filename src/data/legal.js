@@ -28,7 +28,7 @@ export const termsOfService = {
   title: "Terms of Service",
   lastUpdated: "17 November 2026",
   sections: [
-    { heading: "Agreement", body: [`These terms apply to your use of this website and to services provided by ${AGENCY_NAME}. Client engagements are also governed by a separate service agreement.`] },
+    { heading: "Agreement", body: [`These terms apply to your use of this website and to services provided by ${AGENCY_NAME.replace(/\.$/, "")}. Client engagements are also governed by a separate service agreement.`] },
     { heading: "Services", body: ["Services are scoped on a discovery call and agreed in writing before work begins. Each engagement is set out in a proposal or service agreement that describes the work, hours and fees."] },
     { heading: "Payment", body: ["Services are billed monthly in advance in USD. Invoices are due within 7 days, paid by bank transfer, Wise or PayPal."] },
     { heading: "Confidentiality", body: ["We treat all client information as confidential. Our team signs confidentiality agreements as standard, and access to client accounts and data is limited to the people who need it to do the work."] },
