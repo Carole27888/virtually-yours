@@ -1,0 +1,182 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/plus-jakarta-sans";
+
+/*
+ * THEME TOKENS
+ * ------------------------------------------------------------
+ * Change the colours and fonts here and the whole site updates.
+ *
+ * primary = deep forest green (#1F3D2B is primary-900). Dark
+ *           sections, footer, dark buttons, icons and tints.
+ * accent  = clay / terracotta (#C2603E is accent-500). Buttons,
+ *           small labels and key numbers. Use sparingly.
+ * ink     = text and lines. ink-950 (#1A1A1A) is the main text.
+ * paper   = warm off-white page background (#F7F3EC), plus a
+ *           slightly deeper tone for alternating sections.
+ *
+ * Keep the same shade numbers when swapping palettes.
+ * Tip: https://uicolors.app generates a full scale from one colour.
+ */
+@theme {
+  --color-primary-50: #eef2ee;
+  --color-primary-100: #d8e2da;
+  --color-primary-200: #c3d1c6;
+  --color-primary-300: #a3b8a9;
+  --color-primary-400: #7c9a85;
+  --color-primary-500: #5a7b64;
+  --color-primary-600: #44634e;
+  --color-primary-700: #345240;
+  --color-primary-800: #2a4a36;
+  --color-primary-900: #1f3d2b;
+  --color-primary-950: #142a1d;
+
+  --color-accent-50: #fbf1ec;
+  --color-accent-100: #f5ded3;
+  --color-accent-200: #ebbda8;
+  --color-accent-300: #e09a7d;
+  --color-accent-400: #d27c59;
+  --color-accent-500: #c2603e;
+  --color-accent-600: #a9502f;
+  --color-accent-700: #8a4026;
+  --color-accent-800: #6e3420;
+  --color-accent-900: #552a1b;
+
+  --color-ink-50: #faf8f4;
+  --color-ink-100: #f0ece4;
+  --color-ink-200: #e3ddd2;
+  --color-ink-300: #cfc7b9;
+  --color-ink-400: #a39b8e;
+  --color-ink-500: #6b655c;
+  --color-ink-600: #57524a;
+  --color-ink-700: #433f39;
+  --color-ink-800: #2e2b27;
+  --color-ink-900: #232120;
+  --color-ink-950: #1a1a1a;
+
+  --color-paper: #f7f3ec;
+  --color-paper-200: #efe8dc;
+
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans Variable", "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply bg-paper font-sans text-ink-800;
+    overflow-x: clip;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display text-ink-950 tracking-tight;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent-500;
+  }
+  [id] {
+    scroll-margin-top: 6rem;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-accent-700;
+  }
+  .eyebrow::before {
+    content: "";
+    @apply h-px w-6 bg-current;
+  }
+  .on-dark .eyebrow {
+    @apply text-accent-300;
+  }
+
+  .card {
+    @apply rounded-2xl border border-ink-200 bg-white p-6 transition-colors duration-200 sm:p-8;
+  }
+  .card-hover {
+    @apply hover:border-primary-900;
+  }
+
+  .icon-badge {
+    @apply inline-flex size-12 items-center justify-center rounded-xl bg-primary-50 text-primary-800 ring-1 ring-primary-100;
+  }
+
+  .field-label {
+    @apply mb-1.5 block text-sm font-medium text-ink-900;
+  }
+  .field {
+    @apply block w-full rounded-lg border border-ink-300 bg-white px-3.5 py-2.5 text-ink-950 placeholder:text-ink-400 transition focus:border-primary-700 focus:ring-2 focus:ring-primary-100 focus:outline-none;
+  }
+  .field-hint {
+    @apply mt-1 text-xs text-ink-500;
+  }
+
+  .placeholder-chip {
+    @apply rounded bg-amber-100 px-1 font-mono text-[0.85em] text-amber-900;
+  }
+
+  /* Article body text (blog posts and legal pages) */
+  .prose-content {
+    @apply text-lg leading-relaxed text-ink-800;
+  }
+  .prose-content > * + * {
+    @apply mt-5;
+  }
+  .prose-content h2 {
+    @apply mt-12 text-2xl font-bold;
+  }
+  .prose-content ul {
+    @apply list-disc space-y-2 pl-6 marker:text-accent-500;
+  }
+  .prose-content ol {
+    @apply list-decimal space-y-2 pl-6 marker:font-semibold marker:text-accent-600;
+  }
+  .prose-content > section:first-child > h2:first-child {
+    @apply mt-0;
+  }
+  .prose-content blockquote {
+    @apply border-l-4 border-accent-500 bg-paper-200 py-4 pr-4 pl-6 font-display text-xl text-ink-950 italic;
+  }
+}
+
+/* Scroll reveal animation (see components/ui/Reveal.jsx) */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
