@@ -233,8 +233,6 @@ These are still placeholders. Search the project for `[` to find them.
       they are set, both forms tell visitors to email you instead.
 - [ ] **Instagram link:** `socials.instagram` in `src/data/site.js` (the icon is hidden until set)
 - [ ] **Facebook link:** `socials.facebook` in `src/data/site.js` (the icon is hidden until set)
-- [ ] **Founder photo:** save a square photo as `public/images/founder.jpg` and set
-      `photo: "/images/founder.jpg"` in `src/data/team.js`. A "CM" monogram shows until then.
 
 **Also still to decide**
 

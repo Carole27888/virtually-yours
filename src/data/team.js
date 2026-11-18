@@ -14,7 +14,7 @@ export const founder = {
   name: "Carole Mutemi",
   role: `Founder, ${AGENCY_NAME}`,
   location: "Nairobi, Kenya",
-  photo: "/images/founder-placeholder.svg",
+  photo: "/images/founder.jpg",
   photoAlt: "Portrait of Carole Mutemi, founder",
   bio: [
     "Carole is an executive assistant and software developer with more than three years of experience supporting international clients.",
