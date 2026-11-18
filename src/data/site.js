@@ -20,7 +20,7 @@ export const site = {
   // Set showName to true if the image is a symbol only (no agency name in it).
   logo: {
     src: "/logo.png",
-    showName: false,
+    showName: true,
   },
 
   // Your live domain, no trailing slash. Used for canonical URLs, Open Graph and sitemap.xml.

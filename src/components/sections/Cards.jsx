@@ -48,6 +48,24 @@ export function IndustryCard({ industry }) {
   );
 }
 
+/** "Don't see your industry?" card, shown after the industry cards. */
+export function OtherIndustryCard({ data, className = "" }) {
+  return (
+    <Link
+      to={data.cta.href}
+      className={`group flex h-full flex-col justify-between rounded-2xl border border-dashed border-accent-400/50 p-6 transition-colors duration-200 hover:border-accent-300 ${className}`}
+    >
+      <div>
+        <h3 className="text-lg font-bold text-white">{data.title}</h3>
+        <p className="mt-2 text-sm leading-relaxed text-primary-200">{data.text}</p>
+      </div>
+      <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-accent-300 group-hover:text-white">
+        {data.cta.label} <ArrowUpRight className="size-4" aria-hidden="true" />
+      </span>
+    </Link>
+  );
+}
+
 /** Small pill links to services, used on industry pages. */
 export function ServicePills({ slugs, dark = false }) {
   return (

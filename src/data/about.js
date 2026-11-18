@@ -16,7 +16,7 @@ export const story = {
   paragraphs: [
     `${AGENCY_NAME} started with one assistant supporting international clients. Over time it became clear that clients did not just need an extra pair of hands. They needed someone reliable, the right systems and the confidence that nothing would slip.`,
     "So we built an agency around that idea. Our virtual assistants and specialists are trained, vetted and managed. Every client gets a dedicated assistant plus our oversight: structured onboarding, documented SOPs, regular quality checks and weekly reports.",
-    "Today we support wedding photographers, real estate teams, coaches, e-commerce stores and founders with everything from inbox management to ad campaigns, CRM automation and custom websites.",
+    "Today we support creative studios, real estate teams, consultants and coaches, wellness practices, e-commerce stores and founders with everything from inbox management to ad campaigns, CRM automation and custom websites.",
   ],
 };
 

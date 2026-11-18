@@ -34,7 +34,7 @@ export const servicesIntro = {
 export const industriesIntro = {
   eyebrow: "Who we help",
   title: "Support built around your industry",
-  text: "We know the tools, the busy seasons and the clients you serve.",
+  text: "We learn your tools, your busy seasons and the clients you serve, whatever your industry.",
 };
 
 export const testimonialsIntro = {

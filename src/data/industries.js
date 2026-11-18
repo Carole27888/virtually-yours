@@ -6,6 +6,13 @@
  * `services` lists service slugs from services.js.
  */
 
+/** Shown after the list so visitors from other industries know they are welcome. */
+export const otherIndustries = {
+  title: "Don't see your industry?",
+  text: "Most of what we do, from inbox and calendar to leads, CRM and social media, works for any business. Tell us what you need.",
+  cta: { label: "Tell us about your business", href: "/contact" },
+};
+
 export const industries = [
   {
     slug: "wedding-creative-studios",
@@ -60,28 +67,54 @@ export const industries = [
     ],
   },
   {
-    slug: "coaches-service-businesses",
-    name: "Coaches & Service Businesses",
-    shortName: "Coaches & Services",
-    icon: "Users",
+    slug: "professional-services",
+    name: "Consultants, Coaches & Professional Services",
+    shortName: "Professional Services",
+    icon: "Briefcase",
     summary:
-      "More discovery calls on your calendar and far less admin between sessions.",
+      "More time for billable work, with clients, calls and paperwork kept in order.",
     challenges: [
-      "Every hour on admin is an hour not spent with clients",
-      "Discovery calls are booked by hand over long email threads",
+      "Every hour on admin is an hour you cannot bill",
+      "Calls and meetings are booked by hand over long email threads",
+      "Client documents, invoices and follow-ups are easy to let slip",
       "Content and newsletters get pushed back week after week",
-      "Onboarding new clients is inconsistent",
     ],
     howWeHelp: [
       "Inbox and calendar management",
-      "Lead follow-up and discovery call booking",
-      "Automated client onboarding in your CRM",
+      "Lead follow-up and consultation booking",
+      "Client onboarding, document collection and reminders",
+      "Invoicing, billing follow-ups and client admin",
       "Social media and newsletter support",
-      "Invoicing and client admin",
     ],
     services: [
       "virtual-executive-assistants",
       "lead-management-appointment-setting",
+      "crm-setup-automation",
+    ],
+  },
+  {
+    slug: "health-wellness",
+    name: "Health, Wellness & Fitness Practices",
+    shortName: "Health & Wellness",
+    icon: "Heart",
+    summary:
+      "Fuller calendars and happier clients, while you focus on the people in front of you.",
+    challenges: [
+      "Phones, messages and booking requests interrupt sessions",
+      "No-shows and last-minute cancellations leave gaps in the day",
+      "Reviews, referrals and follow-ups are hard to keep up with",
+      "Marketing is the first thing to slip in a busy week",
+    ],
+    howWeHelp: [
+      "Booking, rescheduling and appointment reminders",
+      "Inquiry replies and new client intake",
+      "Follow-ups, review requests and rebooking campaigns",
+      "Social media content and scheduling",
+      "Invoicing and day-to-day admin",
+    ],
+    services: [
+      "lead-management-appointment-setting",
+      "virtual-executive-assistants",
       "social-media-management",
     ],
   },

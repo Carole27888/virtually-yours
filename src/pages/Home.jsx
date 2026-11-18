@@ -3,7 +3,7 @@ import Seo from "../components/Seo.jsx";
 import Button from "../components/ui/Button.jsx";
 import Reveal from "../components/ui/Reveal.jsx";
 import { Container, Section, SectionHeading } from "../components/ui/Section.jsx";
-import { IndustryCard, ServiceCard } from "../components/sections/Cards.jsx";
+import { IndustryCard, OtherIndustryCard, ServiceCard } from "../components/sections/Cards.jsx";
 import { ProcessCompact } from "../components/sections/ProcessSteps.jsx";
 import Testimonials from "../components/sections/Testimonials.jsx";
 import { Icon } from "../lib/icons.jsx";
@@ -11,7 +11,7 @@ import { pageMeta } from "../lib/seo.js";
 import { site } from "../data/site.js";
 import { hero, industriesIntro, painPoints, servicesIntro } from "../data/home.js";
 import { services } from "../data/services.js";
-import { industries } from "../data/industries.js";
+import { industries, otherIndustries } from "../data/industries.js";
 import { processIntro, processSteps } from "../data/process.js";
 
 /** Illustrative "your week" card in the hero. No numbers, nothing invented. */
@@ -116,12 +116,15 @@ export default function Home() {
       {/* Industries */}
       <Section tone="dark">
         <SectionHeading {...industriesIntro} dark />
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {industries.map((ind, i) => (
             <Reveal key={ind.slug} delay={i * 70}>
               <IndustryCard industry={ind} />
             </Reveal>
           ))}
+          <Reveal delay={industries.length * 70} className="sm:col-span-2">
+            <OtherIndustryCard data={otherIndustries} />
+          </Reveal>
         </div>
       </Section>
 

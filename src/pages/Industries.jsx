@@ -2,10 +2,11 @@ import Seo from "../components/Seo.jsx";
 import PageHeader from "../components/ui/PageHeader.jsx";
 import Reveal from "../components/ui/Reveal.jsx";
 import { Container } from "../components/ui/Section.jsx";
+import Button from "../components/ui/Button.jsx";
 import { ServicePills } from "../components/sections/Cards.jsx";
 import { Icon } from "../lib/icons.jsx";
 import { pageMeta } from "../lib/seo.js";
-import { industries } from "../data/industries.js";
+import { industries, otherIndustries } from "../data/industries.js";
 import { industriesIntro } from "../data/home.js";
 
 export default function Industries() {
@@ -26,6 +27,14 @@ export default function Industries() {
                 </a>
               </li>
             ))}
+            <li>
+              <a
+                href="#other-industries"
+                className="inline-flex items-center gap-2 rounded-full border border-dashed border-accent-400/50 px-4 py-2 text-sm text-primary-100 transition hover:border-accent-400 hover:text-white"
+              >
+                Other industries
+              </a>
+            </li>
           </ul>
         </nav>
       </PageHeader>
@@ -83,6 +92,24 @@ export default function Industries() {
           </section>
         );
       })}
+
+      <section
+        id="other-industries"
+        aria-labelledby="other-industries-title"
+        className={`py-20 sm:py-24 ${industries.length % 2 ? "bg-paper-200" : "bg-white"}`}
+      >
+        <Container>
+          <Reveal className="max-w-2xl">
+            <h2 id="other-industries-title" className="text-3xl font-bold sm:text-4xl">
+              {otherIndustries.title}
+            </h2>
+            <p className="mt-4 text-lg leading-relaxed text-ink-600">{otherIndustries.text}</p>
+            <Button href={otherIndustries.cta.href} className="mt-8">
+              {otherIndustries.cta.label}
+            </Button>
+          </Reveal>
+        </Container>
+      </section>
     </>
   );
 }

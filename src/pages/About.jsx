@@ -3,8 +3,8 @@ import PageHeader from "../components/ui/PageHeader.jsx";
 import Reveal from "../components/ui/Reveal.jsx";
 import Button from "../components/ui/Button.jsx";
 import { Section, SectionHeading } from "../components/ui/Section.jsx";
-import { PlaceholderBadge, SafeLink, Text, visibleItems } from "../components/ui/Placeholder.jsx";
-import { Icon, LinkedInIcon } from "../lib/icons.jsx";
+import { PlaceholderBadge, Text, visibleItems } from "../components/ui/Placeholder.jsx";
+import { Icon } from "../lib/icons.jsx";
 import { pageMeta } from "../lib/seo.js";
 import { aboutIntro, mission, story, teamIntro, values } from "../data/about.js";
 import { founder, team } from "../data/team.js";
@@ -111,13 +111,6 @@ export default function About() {
                 <p key={p}>{p}</p>
               ))}
             </div>
-            <SafeLink
-              href={founder.linkedin}
-              className="mt-8 inline-flex items-center gap-2 font-semibold text-ink-950 hover:text-accent-700"
-            >
-              <LinkedInIcon className="size-5" />
-              Connect on LinkedIn
-            </SafeLink>
           </Reveal>
         </div>
       </Section>

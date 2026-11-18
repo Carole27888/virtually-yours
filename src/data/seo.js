@@ -22,7 +22,7 @@ export const pageSeo = {
   },
   industries: {
     title: "Industries We Serve",
-    description: "Virtual assistant and digital support for wedding and creative studios, real estate, coaches, e-commerce stores and startups.",
+    description: "Virtual assistant and digital support for creative studios, real estate, professional services, health and wellness, e-commerce, startups and more.",
   },
   howItWorks: {
     title: "How It Works",
