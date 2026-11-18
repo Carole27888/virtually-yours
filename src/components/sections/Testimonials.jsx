@@ -11,7 +11,7 @@ export default function Testimonials() {
   if (items.length === 0) return null;
 
   return (
-    <Section tone="tint">
+    <Section>
       <SectionHeading {...testimonialsIntro} align="center" />
       <div className="mt-14 grid gap-6 md:grid-cols-3">
         {items.map((t, i) => (

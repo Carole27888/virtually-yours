@@ -102,3 +102,21 @@ export const pricingFaqs = [
   { q: "What if my assistant is sick or on leave?", a: "Our team provides continuity support so your work doesn't stall." },
   { q: "Are ad budgets and software subscriptions included?", a: "No. Ad spend and third-party tools are paid directly by you, so you keep full ownership of your accounts." },
 ];
+
+/**
+ * TIME-BACK CALCULATOR
+ * Shown on /pricing. Visitors enter their own numbers, so the
+ * results are always theirs. Plans and prices come from `plans` above.
+ * `planHours` is the monthly hour limit used to suggest a plan.
+ */
+export const calculator = {
+  eyebrow: "Time-back calculator",
+  title: "What is your admin really costing you?",
+  text: "Move the sliders to match your week. We will show you what that time is worth and which plan fits.",
+  hoursLabel: "Hours a week you spend on tasks you could hand off",
+  rateLabel: "What an hour of your time is worth",
+  rateHint: "Think about what you earn, or could earn, in an hour of client work.",
+  defaults: { hours: 10, rate: 75 },
+  planHours: { Starter: 80, Growth: 160 },
+  note: "An estimate based on your numbers. We confirm the right plan on your discovery call.",
+};

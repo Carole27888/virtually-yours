@@ -38,8 +38,9 @@ save. The dev server updates the page straight away.
 | `home.js` | Home page hero, pain points, final call to action |
 | `services.js` | The 7 services. Each one creates a page at `/services/<slug>` |
 | `industries.js` | The industry sections on `/industries` |
-| `process.js` | The 5 "How it works" steps |
-| `pricing.js` | Plans, custom team, add-ons and pricing FAQ |
+| `process.js` | The 5 "How it works" steps and the "Your first 30 days" timeline |
+| `pricing.js` | Plans, custom team, add-ons, pricing FAQ and the time-back calculator text |
+| `security.js` | The "Your data is safe with us" section (home page and How It Works) |
 | `testimonials.js` | Client testimonials (placeholders for now) |
 | `team.js` | Founder bio and photo, plus team member cards |
 | `about.js` | Story, mission and values |

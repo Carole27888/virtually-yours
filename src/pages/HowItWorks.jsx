@@ -4,6 +4,8 @@ import Reveal from "../components/ui/Reveal.jsx";
 import { Section, SectionHeading } from "../components/ui/Section.jsx";
 import { ProcessTimeline } from "../components/sections/ProcessSteps.jsx";
 import { Icon } from "../lib/icons.jsx";
+import FirstMonth from "../components/sections/FirstMonth.jsx";
+import Security from "../components/sections/Security.jsx";
 import { pageMeta } from "../lib/seo.js";
 import { processIntro, processSteps } from "../data/process.js";
 
@@ -24,7 +26,9 @@ export default function HowItWorks() {
         <ProcessTimeline steps={processSteps} />
       </Section>
 
-      <Section tone="tint">
+      <FirstMonth tone="tint" />
+
+      <Section>
         <SectionHeading
           eyebrow="Included with every plan"
           title="More than an assistant. A managed service."
@@ -43,6 +47,8 @@ export default function HowItWorks() {
           ))}
         </div>
       </Section>
+
+      <Security tone="tint" />
     </>
   );
 }

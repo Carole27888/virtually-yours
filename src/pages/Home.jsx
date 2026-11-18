@@ -3,6 +3,7 @@ import Seo from "../components/Seo.jsx";
 import Button from "../components/ui/Button.jsx";
 import Reveal from "../components/ui/Reveal.jsx";
 import { Container, Section, SectionHeading } from "../components/ui/Section.jsx";
+import Security from "../components/sections/Security.jsx";
 import { IndustryCard, OtherIndustryCard, ServiceCard } from "../components/sections/Cards.jsx";
 import { ProcessCompact } from "../components/sections/ProcessSteps.jsx";
 import Testimonials from "../components/sections/Testimonials.jsx";
@@ -140,6 +141,8 @@ export default function Home() {
           <ProcessCompact steps={processSteps} />
         </div>
       </Section>
+
+      <Security tone="tint" />
 
       <Testimonials />
     </>

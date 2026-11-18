@@ -63,3 +63,42 @@ export const processSteps = [
     ],
   },
 ];
+
+/**
+ * YOUR FIRST 30 DAYS
+ * Shown on /how-it-works after the five steps. Describes what
+ * happens once a client signs up.
+ */
+export const firstMonthIntro = {
+  eyebrow: "Your first 30 days",
+  title: "What happens after you say yes",
+  text: "No guesswork. Here is how your first month with your assistant unfolds.",
+};
+
+export const firstMonth = [
+  {
+    when: "Day 1",
+    title: "Kickoff",
+    text: "A welcome call with your assistant and your account lead. We set up secure access to your tools and agree on the priorities for week one.",
+  },
+  {
+    when: "Week 1",
+    title: "Learning your business",
+    text: "Your assistant learns your workflows and takes on the first tasks, with regular check-ins. You receive your first weekly report.",
+  },
+  {
+    when: "Week 2",
+    title: "Taking the load",
+    text: "Recurring tasks are fully handed over. We write the SOPs for how you like things done and review them with you.",
+  },
+  {
+    when: "Weeks 3 to 4",
+    title: "Running smoothly",
+    text: "Your assistant works independently from your SOPs, and our team runs its first quality check on the work.",
+  },
+  {
+    when: "Day 30",
+    title: "Your 30-day review",
+    text: "We sit down together to look at what is working, what is next and whether your hours or plan should change.",
+  },
+];

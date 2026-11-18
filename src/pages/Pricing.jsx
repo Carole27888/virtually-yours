@@ -8,6 +8,7 @@ import CheckList from "../components/ui/CheckList.jsx";
 import { Section, SectionHeading } from "../components/ui/Section.jsx";
 import { Text } from "../components/ui/Placeholder.jsx";
 import { Icon } from "../lib/icons.jsx";
+import TimeCalculator from "../components/sections/TimeCalculator.jsx";
 import { pageMeta } from "../lib/seo.js";
 import { site } from "../data/site.js";
 import { addOns, customTeam, plans, pricingFaqs, pricingIntro } from "../data/pricing.js";
@@ -82,7 +83,9 @@ export default function Pricing() {
         </Reveal>
       </Section>
 
-      <Section tone="tint">
+      <TimeCalculator tone="tint" />
+
+      <Section>
         <SectionHeading eyebrow="Add-ons" title="Projects to pair with any plan" />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {addOns.map((a, i) => (
@@ -100,7 +103,7 @@ export default function Pricing() {
         </div>
       </Section>
 
-      <Section>
+      <Section tone="tint">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.6fr]">
           <SectionHeading eyebrow="FAQ" title="Pricing questions" />
           <Accordion items={pricingFaqs} />

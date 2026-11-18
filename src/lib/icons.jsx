@@ -39,6 +39,12 @@ import {
   UserX,
   Wallet,
   Workflow,
+  FileSignature,
+  FolderCheck,
+  KeyRound,
+  LogOut,
+  Smartphone,
+  UserLock,
 } from "lucide-react";
 
 const registry = {
@@ -74,6 +80,12 @@ const registry = {
   UserX,
   Wallet,
   Workflow,
+  FileSignature,
+  FolderCheck,
+  KeyRound,
+  LogOut,
+  Smartphone,
+  UserLock,
 };
 
 export function Icon({ name, className = "size-6", ...rest }) {

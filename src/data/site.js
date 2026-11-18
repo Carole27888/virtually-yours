@@ -26,7 +26,7 @@ export const site = {
   // Your live domain, no trailing slash. Used for canonical URLs, Open Graph and sitemap.xml.
   url: "https://virtuallyhandledco.com",
 
-  email: "cmutemi27@gmail.com",
+  email: "info@virtuallyhandledco.com",
   location: "Nairobi, Kenya",
   serviceArea: "Serving clients worldwide",
   hours: "Monday to Friday, covering US and UK business hours. Weekends if needed.",
