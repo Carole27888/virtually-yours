@@ -5,7 +5,6 @@ import Reveal from "../components/ui/Reveal.jsx";
 import { Container, Section, SectionHeading } from "../components/ui/Section.jsx";
 import { IndustryCard, ServiceCard } from "../components/sections/Cards.jsx";
 import { ProcessCompact } from "../components/sections/ProcessSteps.jsx";
-import ResultsStrip from "../components/sections/ResultsStrip.jsx";
 import Testimonials from "../components/sections/Testimonials.jsx";
 import { Icon } from "../lib/icons.jsx";
 import { pageMeta } from "../lib/seo.js";
@@ -139,7 +138,6 @@ export default function Home() {
         </div>
       </Section>
 
-      <ResultsStrip />
       <Testimonials />
     </>
   );

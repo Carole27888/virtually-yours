@@ -3,7 +3,7 @@
 A multi-page website for a full-service virtual assistant and digital services agency.
 Built with React, Vite, Tailwind CSS and React Router. Ready to deploy on Vercel.
 
-All the words, services, prices, case studies and team members live in plain data files in
+All the words, services, prices and team members live in plain data files in
 `src/data/`, so you can update content without touching any page code.
 
 ---
@@ -35,11 +35,10 @@ save. The dev server updates the page straight away.
 | --- | --- |
 | `site.js` | **Agency name**, email, location, social links, Calendly link, form endpoints, menus, main call to action |
 | `seo.js` | Page titles and Google descriptions for each fixed page |
-| `home.js` | Home page hero, pain points, results numbers, final call to action |
+| `home.js` | Home page hero, pain points, final call to action |
 | `services.js` | The 7 services. Each one creates a page at `/services/<slug>` |
 | `industries.js` | The industry sections on `/industries` |
 | `process.js` | The 5 "How it works" steps |
-| `caseStudies.js` | Case studies. **Includes a copy-and-paste template at the bottom** |
 | `pricing.js` | Plans, custom team, add-ons and pricing FAQ |
 | `testimonials.js` | Client testimonials (placeholders for now) |
 | `team.js` | Founder bio and photo, plus team member cards |
@@ -62,8 +61,6 @@ left. A section with nothing left to show disappears completely.
 
 ### Common tasks
 
-- **Add a case study:** copy the template at the bottom of `caseStudies.js` into the list
-  and fill it in. Its page, card, sitemap entry and link preview are created automatically.
 - **Add a team member:** copy one of the objects in the `team` list in `team.js`. Put
   photos in `public/images/` and set `photo: "/images/their-photo.jpg"`. Use `photo: null`
   to show their initials instead.
@@ -195,7 +192,7 @@ Every push to GitHub redeploys the site automatically.
   those tags already in it. That means LinkedIn, WhatsApp, Facebook and Slack show the right
   title and description for each link, even though they don't run JavaScript.
 - `sitemap.xml` and `robots.txt` are generated on every build from the data files, so new
-  services, case studies and blog posts are added automatically. After launch, submit
+  services and blog posts are added automatically. After launch, submit
   `https://virtuallyhandledco.com/sitemap.xml` in
   [Google Search Console](https://search.google.com/search-console).
 - The default share image is `public/og-image.png` (1200 x 630). It currently shows the
@@ -217,7 +214,7 @@ Every push to GitHub redeploys the site automatically.
     ├── components/
     │   ├── layout/          header, footer, page layout
     │   ├── ui/              buttons, sections, accordion, placeholders, logo
-    │   ├── sections/        cards, process steps, testimonials, results, CTA banner
+    │   ├── sections/        cards, process steps, testimonials, CTA banner
     │   ├── forms/           contact and careers forms
     │   ├── CalendlyEmbed.jsx
     │   └── Seo.jsx

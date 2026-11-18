@@ -4,7 +4,7 @@
  * Title and meta description for each page. The agency name is
  * appended to titles automatically ("Pricing | Virtually Handled Co.").
  *
- * Service, case study and blog pages build their SEO from their
+ * Service and blog pages build their SEO from their
  * own data entries, so you do not need to add them here.
  */
 
@@ -27,10 +27,6 @@ export const pageSeo = {
   howItWorks: {
     title: "How It Works",
     description: "Discovery call, needs assessment, VA matching, onboarding with SOPs, then ongoing management and weekly reports. Here is how we work.",
-  },
-  caseStudies: {
-    title: "Case Studies",
-    description: "See how we helped a Dubai real estate agency generate 50 leads in a month and ran the back office for a New York wedding studio.",
   },
   pricing: {
     title: "Pricing",

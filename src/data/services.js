@@ -140,10 +140,9 @@ export const services = [
     ],
     faqs: [
       { q: "Is ad spend included in your fee?", a: "No. Ad spend is paid directly to Meta from your own ad account. Our fee covers strategy, setup and management." },
-      { q: "What kind of results can I expect?", a: "Results depend on your market, offer and budget. You can see what we achieved for a Dubai real estate client in our case studies." },
+      { q: "What kind of results can I expect?", a: "Results depend on your market, offer and budget. We agree clear goals with you before launch and report on progress every week." },
       { q: "Do you follow up with the leads too?", a: "We can. Pairing ads with our lead management service means every lead is contacted quickly." },
     ],
-    relatedCaseStudy: "dubai-real-estate-meta-leads",
   },
   {
     slug: "crm-setup-automation",

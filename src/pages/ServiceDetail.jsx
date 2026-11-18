@@ -5,11 +5,9 @@ import Reveal from "../components/ui/Reveal.jsx";
 import Accordion from "../components/ui/Accordion.jsx";
 import CheckList from "../components/ui/CheckList.jsx";
 import { Section, SectionHeading } from "../components/ui/Section.jsx";
-import { CaseStudyCard } from "../components/sections/Cards.jsx";
 import { Icon } from "../lib/icons.jsx";
 import { serviceMeta } from "../lib/seo.js";
 import { getService, services } from "../data/services.js";
-import { getCaseStudy } from "../data/caseStudies.js";
 import NotFound from "./NotFound.jsx";
 
 export default function ServiceDetail() {
@@ -17,7 +15,6 @@ export default function ServiceDetail() {
   const service = getService(slug);
   if (!service) return <NotFound />;
 
-  const caseStudy = service.relatedCaseStudy && getCaseStudy(service.relatedCaseStudy);
   const others = services.filter((s) => s.slug !== slug);
 
   return (
@@ -61,15 +58,6 @@ export default function ServiceDetail() {
           ))}
         </ol>
       </Section>
-
-      {caseStudy && (
-        <Section tone="tint">
-          <SectionHeading eyebrow="Case study" title="See it in action" />
-          <div className="mt-12 max-w-3xl">
-            <CaseStudyCard study={caseStudy} />
-          </div>
-        </Section>
-      )}
 
       {/* FAQ */}
       <Section>

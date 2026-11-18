@@ -37,22 +37,6 @@ export const industriesIntro = {
   text: "We know the tools, the busy seasons and the clients you serve.",
 };
 
-/**
- * RESULTS HIGHLIGHTS
- * Only use real, verifiable numbers here. These come from the
- * case studies and founder background.
- */
-export const results = {
-  eyebrow: "Results",
-  title: "Real work, real outcomes",
-  items: [
-    { value: "50", label: "Leads in one month for a Dubai real estate client", href: "/case-studies/dubai-real-estate-meta-leads" },
-    { value: "6", label: "Closed sales from a single month of Meta ads", href: "/case-studies/dubai-real-estate-meta-leads" },
-    { value: "4", label: "Social platforms managed for a New York wedding studio", href: "/case-studies/nyc-wedding-studio-back-office" },
-    { value: "3+", label: "Years supporting international clients", href: "/about" },
-  ],
-};
-
 export const testimonialsIntro = {
   eyebrow: "Client words",
   title: "What our clients say",

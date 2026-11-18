@@ -8,7 +8,7 @@
  * 2. Generates dist/sitemap.xml from the content data files.
  * 3. Writes dist/robots.txt pointing at the sitemap.
  *
- * Routes come from src/lib/seo.js, so new services, case studies and
+ * Routes come from src/lib/seo.js, so new services and
  * blog posts are picked up automatically.
  */
 import { mkdir, readFile, writeFile } from "node:fs/promises";

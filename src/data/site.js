@@ -83,7 +83,6 @@ export const mainNav = [
   { label: "Services", href: "/services" },
   { label: "Industries", href: "/industries" },
   { label: "How It Works", href: "/how-it-works" },
-  { label: "Case Studies", href: "/case-studies" },
   { label: "Pricing", href: "/pricing" },
   { label: "About", href: "/about" },
 ];
@@ -92,7 +91,6 @@ export const footerNav = {
   company: [
     { label: "About", href: "/about" },
     { label: "How It Works", href: "/how-it-works" },
-    { label: "Case Studies", href: "/case-studies" },
     { label: "Pricing", href: "/pricing" },
     { label: "Careers", href: "/careers" },
     { label: "Resources", href: "/blog" },

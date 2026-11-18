@@ -4,7 +4,6 @@
  * Each entry becomes a section on /industries (linkable with
  * /industries#<slug>) and a card on the home page.
  * `services` lists service slugs from services.js.
- * `caseStudy` (optional) is a slug from caseStudies.js.
  */
 
 export const industries = [
@@ -33,7 +32,6 @@ export const industries = [
       "social-media-management",
       "crm-setup-automation",
     ],
-    caseStudy: "nyc-wedding-studio-back-office",
   },
   {
     slug: "real-estate",
@@ -60,7 +58,6 @@ export const industries = [
       "lead-management-appointment-setting",
       "crm-setup-automation",
     ],
-    caseStudy: "dubai-real-estate-meta-leads",
   },
   {
     slug: "coaches-service-businesses",

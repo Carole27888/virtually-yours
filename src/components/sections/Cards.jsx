@@ -48,33 +48,7 @@ export function IndustryCard({ industry }) {
   );
 }
 
-export function CaseStudyCard({ study }) {
-  const industry = industries.find((i) => i.slug === study.industry);
-  return (
-    <Link to={`/case-studies/${study.slug}`} className="card card-hover group flex h-full flex-col">
-      <div className="flex flex-wrap items-center gap-2 text-xs font-semibold tracking-wide text-ink-500 uppercase">
-        {industry && <span className="rounded-full bg-paper-200 px-3 py-1 text-ink-700">{industry.shortName}</span>}
-        <span>{study.location}</span>
-      </div>
-      <h3 className="mt-5 text-2xl font-bold leading-snug">{study.title}</h3>
-      <p className="mt-3 leading-relaxed text-ink-600">{study.summary}</p>
-      <dl className="mt-6 grid grid-cols-3 gap-4 border-t border-ink-200 pt-6">
-        {study.results.slice(0, 3).map((r) => (
-          <div key={r.label}>
-            <dt className="sr-only">{r.label}</dt>
-            <dd className="font-display text-2xl font-extrabold text-accent-600">{r.value}</dd>
-            <dd className="mt-1 text-xs leading-snug text-ink-500">{r.label}</dd>
-          </div>
-        ))}
-      </dl>
-      <span className="mt-auto pt-6 text-sm font-semibold text-ink-950 group-hover:text-accent-700">
-        Read the case study
-      </span>
-    </Link>
-  );
-}
-
-/** Small pill links to services, used on industry and case study pages. */
+/** Small pill links to services, used on industry pages. */
 export function ServicePills({ slugs, dark = false }) {
   return (
     <ul className="flex flex-wrap gap-2">

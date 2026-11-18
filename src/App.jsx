@@ -5,8 +5,6 @@ import Services from "./pages/Services.jsx";
 import ServiceDetail from "./pages/ServiceDetail.jsx";
 import Industries from "./pages/Industries.jsx";
 import HowItWorks from "./pages/HowItWorks.jsx";
-import CaseStudies from "./pages/CaseStudies.jsx";
-import CaseStudyDetail from "./pages/CaseStudyDetail.jsx";
 import Pricing from "./pages/Pricing.jsx";
 import About from "./pages/About.jsx";
 import Careers from "./pages/Careers.jsx";
@@ -25,8 +23,6 @@ export default function App() {
         <Route path="services/:slug" element={<ServiceDetail />} />
         <Route path="industries" element={<Industries />} />
         <Route path="how-it-works" element={<HowItWorks />} />
-        <Route path="case-studies" element={<CaseStudies />} />
-        <Route path="case-studies/:slug" element={<CaseStudyDetail />} />
         <Route path="pricing" element={<Pricing />} />
         <Route path="about" element={<About />} />
         <Route path="careers" element={<Careers />} />

@@ -1,5 +1,3 @@
-import { Link } from "react-router";
-import { ArrowRight } from "lucide-react";
 import Seo from "../components/Seo.jsx";
 import PageHeader from "../components/ui/PageHeader.jsx";
 import Reveal from "../components/ui/Reveal.jsx";
@@ -9,7 +7,6 @@ import { Icon } from "../lib/icons.jsx";
 import { pageMeta } from "../lib/seo.js";
 import { industries } from "../data/industries.js";
 import { industriesIntro } from "../data/home.js";
-import { getCaseStudy } from "../data/caseStudies.js";
 
 export default function Industries() {
   return (
@@ -34,7 +31,6 @@ export default function Industries() {
       </PageHeader>
 
       {industries.map((ind, i) => {
-        const study = ind.caseStudy && getCaseStudy(ind.caseStudy);
         return (
           <section
             key={ind.slug}
@@ -52,18 +48,6 @@ export default function Industries() {
                     {ind.name}
                   </h2>
                   <p className="mt-4 text-lg leading-relaxed text-ink-600">{ind.summary}</p>
-                  {study && (
-                    <Link
-                      to={`/case-studies/${study.slug}`}
-                      className="group mt-8 block rounded-2xl bg-primary-900 p-6 text-white transition hover:bg-primary-800"
-                    >
-                      <p className="text-xs font-semibold tracking-widest text-accent-300 uppercase">Case study</p>
-                      <p className="mt-2 font-display text-lg font-bold leading-snug">{study.title}</p>
-                      <span className="mt-4 inline-flex items-center gap-1.5 text-sm text-primary-200 group-hover:text-white">
-                        Read the story <ArrowRight className="size-4" aria-hidden="true" />
-                      </span>
-                    </Link>
-                  )}
                 </div>
 
                 <div className="grid gap-6 sm:grid-cols-2">

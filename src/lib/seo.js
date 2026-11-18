@@ -8,7 +8,6 @@
 import { AGENCY_NAME, site } from "../data/site.js";
 import { pageSeo } from "../data/seo.js";
 import { services } from "../data/services.js";
-import { caseStudies } from "../data/caseStudies.js";
 import { posts } from "../data/blog.js";
 
 export const staticRoutes = {
@@ -16,7 +15,6 @@ export const staticRoutes = {
   services: "/services",
   industries: "/industries",
   howItWorks: "/how-it-works",
-  caseStudies: "/case-studies",
   pricing: "/pricing",
   about: "/about",
   careers: "/careers",
@@ -43,13 +41,6 @@ export const serviceMeta = (s) => ({
   path: `/services/${s.slug}`,
 });
 
-export const caseStudyMeta = (c) => ({
-  title: `Case Study: ${c.client}, ${c.location}`,
-  description: c.summary,
-  path: `/case-studies/${c.slug}`,
-  type: "article",
-});
-
 export const postMeta = (p) => ({
   title: p.title,
   description: p.excerpt,
@@ -61,7 +52,6 @@ export const postMeta = (p) => ({
 export const allRoutes = () => [
   ...Object.keys(staticRoutes).map(pageMeta),
   ...services.map(serviceMeta),
-  ...caseStudies.map(caseStudyMeta),
   ...posts.map(postMeta),
 ];
 
