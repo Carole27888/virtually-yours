@@ -3,16 +3,19 @@ import { Clock, Globe, Mail, MapPin } from "lucide-react";
 import Logo from "../ui/Logo.jsx";
 import { Container } from "../ui/Section.jsx";
 import { SafeLink, Text } from "../ui/Placeholder.jsx";
-import { FacebookIcon, InstagramIcon, LinkedInIcon, WhatsAppIcon } from "../../lib/icons.jsx";
+import { FacebookIcon, InstagramIcon, LinkedInIcon, TikTokIcon, WhatsAppIcon, XIcon } from "../../lib/icons.jsx";
 import { AGENCY_NAME, footerNav, isPlaceholder, site, whatsappUrl } from "../../data/site.js";
 import { services } from "../../data/services.js";
 
-// Social links still set to a [PLACEHOLDER] are hidden when showPlaceholders is false.
+// Social links still set to a [PLACEHOLDER] show dimmed and are not clickable.
+// A link set to null is left out.
 const socials = [
-  { label: "LinkedIn", href: site.socials.linkedin, Icon: LinkedInIcon },
   { label: "Instagram", href: site.socials.instagram, Icon: InstagramIcon },
   { label: "Facebook", href: site.socials.facebook, Icon: FacebookIcon },
-].filter((s) => site.showPlaceholders || !isPlaceholder(s.href));
+  { label: "LinkedIn", href: site.socials.linkedin, Icon: LinkedInIcon },
+  { label: "TikTok", href: site.socials.tiktok, Icon: TikTokIcon },
+  { label: "X", href: site.socials.x, Icon: XIcon },
+].filter((s) => s.href);
 
 function FooterColumn({ title, links }) {
   return (
@@ -75,7 +78,7 @@ export default function Footer() {
                 <li key={label}>
                   <SafeLink
                     href={href}
-                    aria-label={label}
+                    aria-label={isPlaceholder(href) ? `${label} (coming soon)` : label}
                     className="flex size-10 items-center justify-center rounded-full border border-white/10 text-primary-200 transition hover:border-accent-400 hover:text-accent-300"
                   >
                     <Icon className="size-4" />

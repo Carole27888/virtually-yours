@@ -48,10 +48,15 @@ export const site = {
   // Calendly: paste your full scheduling link, e.g. https://calendly.com/your-name/discovery-call
   calendlyUrl: "[CALENDLY LINK]",
 
+  // Social media. Paste the full link to each profile, e.g. https://www.instagram.com/yourname
+  // Icons still set to a [PLACEHOLDER] show dimmed and are not clickable.
+  // Set a link to null to remove that icon completely.
   socials: {
-    linkedin: "https://www.linkedin.com/in/caroline-mutemi-70b0422b2",
     instagram: "[INSTAGRAM]",
     facebook: "[FACEBOOK]",
+    linkedin: "[LINKEDIN]",
+    tiktok: "[TIKTOK]",
+    x: "[X]",
   },
 
   // Formspree endpoints. Create two forms at https://formspree.io and paste the URLs here.

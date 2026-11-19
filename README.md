@@ -232,8 +232,8 @@ These are still placeholders. Search the project for `[` to find them.
       asks visitors to email you to arrange a call.
 - [ ] **Formspree endpoints:** `forms.contact` and `forms.careers` in `src/data/site.js`. Until
       they are set, both forms tell visitors to email you instead.
-- [ ] **Instagram link:** `socials.instagram` in `src/data/site.js` (the icon is hidden until set)
-- [ ] **Facebook link:** `socials.facebook` in `src/data/site.js` (the icon is hidden until set)
+- [ ] **Social media links:** Instagram, Facebook, LinkedIn, TikTok and X under `socials` in
+      `src/data/site.js`. Until each is set, its footer icon shows dimmed and is not clickable.
 
 **Also still to decide**
 

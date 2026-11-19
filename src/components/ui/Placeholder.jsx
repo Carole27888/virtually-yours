@@ -34,7 +34,12 @@ export function Text({ children }) {
 export function SafeLink({ href, children, className = "", ...rest }) {
   if (isPlaceholder(href)) {
     return (
-      <span className={`${className} cursor-not-allowed opacity-70`} title={`Replace ${href} in src/data/site.js`}>
+      <span
+        className={`${className} cursor-default opacity-50`}
+        title={site.showPlaceholders ? `Replace ${href} in src/data/site.js` : "Coming soon"}
+        role={rest["aria-label"] ? "img" : undefined}
+        aria-label={rest["aria-label"]}
+      >
         {children}
       </span>
     );
