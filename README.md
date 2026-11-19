@@ -149,10 +149,10 @@ don't need your own server.
 Visitors see a success message after sending, or a clear error message if something goes
 wrong. Until the endpoints are set, the forms show a "not connected yet" message.
 
-**CV uploads:** Formspree accepts file uploads on paid plans only. On the free plan,
-applicants can paste a link to their CV instead (the form accepts either). If you don't
-want the upload field at all, delete the "Upload your CV" `<Field>` in
-`src/components/forms/CareersForm.jsx`.
+**CV uploads:** Formspree accepts file uploads on paid plans only, so `forms.allowFileUploads`
+in `src/data/site.js` is `false`. Applicants paste a link to their CV (Google Drive,
+Dropbox) instead. If you upgrade Formspree, set it to `true` and the "Upload your CV" field
+comes back, with the link as an alternative.
 
 Spam protection: both forms include a hidden honeypot field. You can turn on reCAPTCHA in
 your Formspree settings too.
@@ -228,8 +228,6 @@ These are still placeholders. Search the project for `[` to find them.
 
 **Pending items you named**
 
-- [ ] **Formspree endpoints:** `forms.contact` and `forms.careers` in `src/data/site.js`. Until
-      they are set, both forms tell visitors to email you instead.
 - [ ] **Social media links:** Instagram, Facebook, LinkedIn, TikTok and X under `socials` in
       `src/data/site.js`. Until each is set, its footer icon shows dimmed and is not clickable.
 

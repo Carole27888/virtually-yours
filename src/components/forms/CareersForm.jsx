@@ -5,12 +5,14 @@ import { applicationOptions, roles } from "../../data/careers.js";
 
 const MAX_CV_MB = 10;
 
-/** Applicants must provide a CV file or a CV link. */
+const uploads = site.forms.allowFileUploads;
+
+/** Applicants must provide a CV file or a CV link (link only when uploads are off). */
 function validate(data) {
-  const file = data.get("cv");
+  const file = uploads ? data.get("cv") : null;
   const hasFile = file && file.size > 0;
   const hasLink = String(data.get("cv_link") || "").trim() !== "";
-  if (!hasFile && !hasLink) return "Please upload your CV or paste a link to it.";
+  if (!hasFile && !hasLink) return uploads ? "Please upload your CV or paste a link to it." : "Please paste a link to your CV.";
   if (hasFile && file.size > MAX_CV_MB * 1024 * 1024) return `Your CV file must be smaller than ${MAX_CV_MB} MB.`;
   if (!hasFile) data.delete("cv"); // don't send an empty file field
   return null;
@@ -30,7 +32,7 @@ export default function CareersForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6" encType="multipart/form-data">
+    <form onSubmit={handleSubmit} className="space-y-6" encType={uploads ? "multipart/form-data" : undefined}>
       <input type="hidden" name="_subject" value={`New job application for ${AGENCY_NAME}`} />
       <Honeypot />
       <div className="grid gap-6 sm:grid-cols-2">
@@ -64,7 +66,8 @@ export default function CareersForm() {
         placeholder="Roles you have held, tools you use and the kind of clients you have supported."
       />
       <Field label="Portfolio or LinkedIn link" name="portfolio" type="url" placeholder="https://" />
-      <div className="grid gap-6 rounded-xl border border-dashed border-ink-300 bg-paper-200/50 p-5 sm:grid-cols-2">
+      <div className={`grid gap-6 rounded-xl border border-dashed border-ink-300 bg-paper-200/50 p-5 ${uploads ? "sm:grid-cols-2" : ""}`}>
+        {uploads && (
         <Field
           label="Upload your CV"
           name="cv"
@@ -73,7 +76,15 @@ export default function CareersForm() {
           hint={`PDF or Word, up to ${MAX_CV_MB} MB.`}
           className="[&_.field]:file:mr-3 [&_.field]:file:rounded-md [&_.field]:file:border-0 [&_.field]:file:bg-primary-900 [&_.field]:file:px-3 [&_.field]:file:py-1.5 [&_.field]:file:text-sm [&_.field]:file:text-white"
         />
-        <Field label="Or paste a link to your CV" name="cv_link" type="url" placeholder="Google Drive, Dropbox..." hint="Make sure the link is viewable." />
+        )}
+        <Field
+          label={uploads ? "Or paste a link to your CV" : "Link to your CV"}
+          name="cv_link"
+          type="url"
+          required={!uploads}
+          placeholder="Google Drive, Dropbox..."
+          hint="Upload your CV to Google Drive or Dropbox and make sure anyone with the link can view it."
+        />
       </div>
       <FormError status={status} error={error} />
       <SubmitRow status={status} label="Submit application" />
