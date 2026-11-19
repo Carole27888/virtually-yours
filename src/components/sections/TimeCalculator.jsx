@@ -87,7 +87,7 @@ export default function TimeCalculator({ tone = "tint" }) {
         </div>
 
         <div className="on-dark flex flex-col bg-primary-900 p-6 text-primary-200 sm:p-10" aria-live="polite">
-          <dl className="grid grid-cols-2 gap-6">
+          <dl className="grid gap-6 min-[400px]:grid-cols-2">
             <div>
               <dt className="text-sm">Hours a month</dt>
               <dd className="mt-1 font-display text-3xl font-extrabold text-white tabular-nums">{monthlyHours}</dd>
