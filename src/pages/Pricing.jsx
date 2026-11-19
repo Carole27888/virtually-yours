@@ -8,7 +8,10 @@ import CheckList from "../components/ui/CheckList.jsx";
 import { Section, SectionHeading } from "../components/ui/Section.jsx";
 import { Text } from "../components/ui/Placeholder.jsx";
 import { Icon } from "../lib/icons.jsx";
-import TimeCalculator from "../components/sections/TimeCalculator.jsx";
+// Time-back calculator: hidden for now. To bring it back, uncomment this import
+// and the <TimeCalculator /> line below. The component and its text are kept in
+// components/sections/TimeCalculator.jsx and data/pricing.js (`calculator`).
+// import TimeCalculator from "../components/sections/TimeCalculator.jsx";
 import { pageMeta } from "../lib/seo.js";
 import { site } from "../data/site.js";
 import { addOns, customTeam, plans, pricingFaqs, pricingIntro } from "../data/pricing.js";
@@ -83,9 +86,9 @@ export default function Pricing() {
         </Reveal>
       </Section>
 
-      <TimeCalculator tone="tint" />
+      {/* <TimeCalculator tone="tint" /> */}
 
-      <Section>
+      <Section tone="tint">
         <SectionHeading eyebrow="Add-ons" title="Projects to pair with any plan" />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {addOns.map((a, i) => (
@@ -103,7 +106,7 @@ export default function Pricing() {
         </div>
       </Section>
 
-      <Section tone="tint">
+      <Section>
         <div className="grid gap-12 lg:grid-cols-[1fr_1.6fr]">
           <SectionHeading eyebrow="FAQ" title="Pricing questions" />
           <Accordion items={pricingFaqs} />
