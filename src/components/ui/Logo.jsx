@@ -24,7 +24,7 @@ export default function Logo({ dark = false, className = "" }) {
         />
       </span>
       {showName && (
-        <span className={`font-display text-lg font-bold tracking-tight ${dark ? "text-white" : "text-ink-950"}`}>
+        <span className={`font-display text-base font-bold tracking-tight whitespace-nowrap sm:text-lg ${dark ? "text-white" : "text-ink-950"}`}>
           {first}
           {rest && (
             <>

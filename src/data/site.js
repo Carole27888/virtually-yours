@@ -46,7 +46,7 @@ export const site = {
   },
 
   // Calendly: paste your full scheduling link, e.g. https://calendly.com/your-name/discovery-call
-  calendlyUrl: "[CALENDLY LINK]",
+  calendlyUrl: "https://calendly.com/virtuallyhandledco/discovery-call",
 
   // Social media. Paste the full link to each profile, e.g. https://www.instagram.com/yourname
   // Icons still set to a [PLACEHOLDER] show dimmed and are not clickable.

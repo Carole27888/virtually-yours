@@ -70,9 +70,9 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Button href={site.cta.href} className="hidden sm:inline-flex">
-            {site.cta.label}
-          </Button>
+          <span className="hidden sm:block">
+            <Button href={site.cta.href}>{site.cta.label}</Button>
+          </span>
           <button
             type="button"
             onClick={() => setOpen((o) => !o)}

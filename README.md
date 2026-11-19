@@ -228,8 +228,6 @@ These are still placeholders. Search the project for `[` to find them.
 
 **Pending items you named**
 
-- [ ] **Calendly link:** `calendlyUrl` in `src/data/site.js`. Until it is set, the Contact page
-      asks visitors to email you to arrange a call.
 - [ ] **Formspree endpoints:** `forms.contact` and `forms.careers` in `src/data/site.js`. Until
       they are set, both forms tell visitors to email you instead.
 - [ ] **Social media links:** Instagram, Facebook, LinkedIn, TikTok and X under `socials` in
