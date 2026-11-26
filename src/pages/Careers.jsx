@@ -93,14 +93,14 @@ export default function Careers() {
               <SectionHeading
                 eyebrow="Apply"
                 title="Send us your application"
-                text="Our application form takes about ten minutes. Have your CV ready as a PDF or Word file."
+                text="Our application form takes about ten minutes. Have a link to your CV ready."
               />
               <div className="mt-10 rounded-3xl border border-ink-200 bg-white p-6 sm:p-10">
                 <ol className="space-y-4 text-ink-700">
                   {[
+                    "Upload your CV to Google Drive or Dropbox and copy a link that anyone can view.",
                     "Open the application form. It opens in a new tab.",
-                    "Sign in with your Google account when asked. This is needed to upload your CV.",
-                    "Tell us about your skills and experience, attach your CV and submit.",
+                    "Tell us about your skills and experience, paste your CV link and submit.",
                   ].map((step, i) => (
                     <li key={step} className="flex gap-4">
                       <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-primary-900 font-display text-sm font-bold text-accent-300">

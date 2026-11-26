@@ -40,8 +40,8 @@ export const site = {
   // number: international format, digits only (no +, spaces or dashes).
   // Set number to "" to hide the bubble.
   whatsapp: {
-    number: "254795052260",
-    display: "+254 795 052 260",
+    number: "254115733862",
+    display: "+254 115 733 862",
     message: `Hi ${AGENCY_NAME}, I'd like to know more about your services.`,
   },
 
