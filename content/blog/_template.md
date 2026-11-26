@@ -3,6 +3,10 @@ title: Your post title, written the way people search for it
 date: 2026-12-01
 category: Delegation
 excerpt: One or two sentences (about 150 characters) shown on the blog page and in Google results.
+image: /images/blog/your-post-file-name.jpg
+imageSmall: /images/blog/your-post-file-name-sm.jpg
+imageAlt: Describe the photo in a few words, for screen readers
+imageCredit: Photographer's name
 draft: true
 ---
 
@@ -18,7 +22,13 @@ HOW TO USE THIS TEMPLATE (delete these notes before publishing)
    - draft: true hides the post. Delete that line when it is ready.
 3. Length: aim for 1,000 to 1,500 words. Posts under 600 words get a
    warning when the site builds, because short pages rarely rank.
-4. Files starting with _ (like this one) are never published.
+4. Cover photo (optional but recommended): save a landscape photo,
+   about 1600 x 840 pixels, in public/images/blog/ and a smaller copy
+   (about 800 x 420) ending in -sm.jpg. Only use photos you have the
+   right to use, such as your own or free photos from unsplash.com.
+   If you leave the image lines out, the post simply has no photo.
+   imageSmall is optional; without it the cards use the large photo.
+5. Files starting with _ (like this one) are never published.
 
 Start with two or three sentences that tell the reader what they will get from the post.
 

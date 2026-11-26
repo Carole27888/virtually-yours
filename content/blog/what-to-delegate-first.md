@@ -3,6 +3,10 @@ title: What to delegate first: a simple guide for busy business owners
 date: 2026-12-02
 category: Delegation
 excerpt: You know you need help, but where do you start? Here is a practical way to choose the first tasks to hand off, and the ones to keep.
+image: /images/blog/what-to-delegate-first.jpg
+imageSmall: /images/blog/what-to-delegate-first-sm.jpg
+imageAlt: A handwritten to-do list in a notebook with a pen
+imageCredit: Thomas Bormans
 ---
 
 Most business owners who decide to get help hit the same wall straight away. They know they are doing too much, but when they sit down to hand something off, they freeze. Everything feels important. Everything feels like it needs them.

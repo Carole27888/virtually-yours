@@ -3,6 +3,10 @@ title: How to write an SOP your virtual assistant can actually follow
 date: 2026-02-10
 category: Systems
 excerpt: Clear standard operating procedures are the secret to delegating with confidence. Here is a simple format that works.
+image: /images/blog/how-to-write-an-sop-your-va-can-follow.jpg
+imageSmall: /images/blog/how-to-write-an-sop-your-va-can-follow-sm.jpg
+imageAlt: A person writing notes in a notebook with a red pen
+imageCredit: lilartsy
 ---
 
 A standard operating procedure (SOP) is a written guide to doing a task the same way every time. Good SOPs make delegation faster, reduce mistakes and mean your business does not rely on memory.

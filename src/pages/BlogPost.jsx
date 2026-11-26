@@ -28,7 +28,7 @@ function articleSchema(post) {
     author: { "@type": "Person", name: post.author },
     publisher: { "@type": "Organization", name: AGENCY_NAME, logo: { "@type": "ImageObject", url: absoluteUrl(site.logo.src) } },
     mainEntityOfPage: absoluteUrl(`/blog/${post.slug}`),
-    image: absoluteUrl(site.ogImage),
+    image: absoluteUrl(post.image || site.ogImage),
   };
 }
 
@@ -51,6 +51,20 @@ export default function BlogPost() {
 
       <article className="py-16 sm:py-20">
         <Container className="max-w-3xl!">
+          {post.image && (
+            <figure className="mb-10">
+              <img
+                src={post.image}
+                alt={post.imageAlt}
+                width="1600"
+                height="840"
+                className="aspect-[40/21] w-full rounded-2xl bg-paper-200 object-cover"
+              />
+              {post.imageCredit && (
+                <figcaption className="mt-2 text-xs text-ink-500">Photo: {post.imageCredit} on Unsplash</figcaption>
+              )}
+            </figure>
+          )}
           {post.excerpt && <p className="mb-8 font-display text-xl leading-relaxed text-ink-950">{post.excerpt}</p>}
           <PostBody blocks={post.body} />
         </Container>

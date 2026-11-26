@@ -3,6 +3,10 @@ title: Freelancer, virtual assistant or managed agency: which is right for you?
 date: 2026-12-11
 category: Hiring
 excerpt: There is more than one way to get help with your business. Here is an honest comparison of the main options, so you can choose the one that fits.
+image: /images/blog/freelancer-virtual-assistant-or-managed-agency.jpg
+imageSmall: /images/blog/freelancer-virtual-assistant-or-managed-agency-sm.jpg
+imageAlt: A team talking around a table in a bright office
+imageCredit: Redd Francisco
 ---
 
 Once you decide you need help, the next question is how to get it. You could hire a freelancer for specific projects, bring on an independent virtual assistant or work with a managed agency that provides an assistant and supports them.

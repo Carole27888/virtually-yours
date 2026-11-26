@@ -92,7 +92,14 @@ words, or with no excerpt.
 **Categories:** keep to a handful (for example Delegation, Systems, Productivity, Hiring,
 Growth). The blog page builds its filter buttons from the categories in use.
 
-**Images:** put them in `public/images/blog/` and add `![Description](/images/blog/name.jpg)`.
+**Cover photos:** each post can have a cover photo (`image`, `imageSmall`, `imageAlt` and
+`imageCredit` at the top of the file). It shows on the blog cards, at the top of the post
+and in link previews on social media. Save it in `public/images/blog/` at about 1600 x 840,
+with a smaller copy at about 800 x 420. The current photos are from Unsplash, which allows
+free use on business websites.
+
+**Images inside a post:** put them in `public/images/blog/` and add
+`![Description](/images/blog/name.jpg)` on its own line.
 
 ### Scheduling blog posts
 

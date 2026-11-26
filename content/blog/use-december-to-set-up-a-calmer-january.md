@@ -3,6 +3,10 @@ title: How to use December to set up a calmer January
 date: 2026-12-04
 category: Productivity
 excerpt: December is busy, but it is also the best time to prepare for the new year. A few hours now can save you a hectic start to January.
+image: /images/blog/use-december-to-set-up-a-calmer-january.jpg
+imageSmall: /images/blog/use-december-to-set-up-a-calmer-january-sm.jpg
+imageAlt: An open monthly planner on a desk
+imageCredit: Eric Rothermel
 ---
 
 For many business owners, January arrives like a wave. Clients come back from their holidays all at once, inboxes fill up, new goals need planning and the admin that was put off in December is suddenly urgent.

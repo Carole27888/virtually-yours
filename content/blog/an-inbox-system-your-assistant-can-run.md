@@ -3,6 +3,10 @@ title: An inbox system your virtual assistant can run for you
 date: 2026-12-07
 category: Systems
 excerpt: Email can quietly take over your whole day. Here is a simple inbox system that a virtual assistant can run, so you only see what truly needs you.
+image: /images/blog/an-inbox-system-your-assistant-can-run.jpg
+imageSmall: /images/blog/an-inbox-system-your-assistant-can-run-sm.jpg
+imageAlt: A woman checking her phone while working on a laptop
+imageCredit: Christina @ wocintechchat.com
 ---
 
 For many business owners, email is the first thing they check in the morning and the last thing they check at night. It is where new clients arrive, where problems surface and where most of the day's small decisions wait. It is also one of the easiest places to lose hours without noticing.

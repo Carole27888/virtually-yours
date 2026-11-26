@@ -46,6 +46,7 @@ export const postMeta = (p) => ({
   description: p.excerpt,
   path: `/blog/${p.slug}`,
   type: "article",
+  ...(p.image ? { image: p.image, imageWidth: 1600, imageHeight: 840 } : {}),
 });
 
 /**
@@ -66,6 +67,8 @@ export const resolveMeta = (meta) => {
     description: meta.description,
     url: absoluteUrl(meta.path),
     image: absoluteUrl(meta.image || site.ogImage),
+    imageWidth: meta.image ? meta.imageWidth || 1200 : 1200,
+    imageHeight: meta.image ? meta.imageHeight || 630 : 630,
     type: meta.type || "website",
     siteName: AGENCY_NAME,
     noindex: Boolean(meta.noindex),

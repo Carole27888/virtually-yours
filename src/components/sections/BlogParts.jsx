@@ -83,8 +83,23 @@ export function PostCard({ post, featured = false, as: H = "h2" }) {
   return (
     <Link
       to={`/blog/${post.slug}`}
-      className={`card card-hover group flex h-full flex-col ${featured ? "lg:p-12" : ""}`}
+      className={`card card-hover group flex h-full flex-col overflow-hidden ${
+        featured && post.image ? "lg:grid lg:grid-cols-[1.1fr_1fr] lg:gap-12 lg:p-0" : featured ? "lg:p-12" : ""
+      }`}
     >
+      {post.image && (
+        <img
+          src={featured ? post.image : post.imageSmall}
+          alt=""
+          loading="lazy"
+          width={featured ? 1600 : 800}
+          height={featured ? 840 : 420}
+          className={`-mx-6 -mt-6 mb-6 aspect-[40/21] w-[calc(100%+3rem)] max-w-none bg-paper-200 object-cover sm:-mx-8 sm:-mt-8 sm:w-[calc(100%+4rem)] ${
+            featured ? "lg:m-0 lg:h-full lg:w-full lg:aspect-auto" : ""
+          }`}
+        />
+      )}
+      <div className={featured && post.image ? "flex flex-col lg:py-12 lg:pr-12" : "contents"}>
       <div className="flex items-center justify-between gap-3">
         <span className="rounded-full bg-primary-50 px-3 py-1 text-xs font-semibold text-primary-800">{post.category}</span>
         <ArrowUpRight
@@ -104,6 +119,7 @@ export function PostCard({ post, featured = false, as: H = "h2" }) {
       <p className="mt-6 border-t border-ink-200 pt-5 text-sm text-ink-500">
         <time dateTime={post.date}>{formatDate(post.date)}</time> · {post.readingTime}
       </p>
+      </div>
     </Link>
   );
 }
