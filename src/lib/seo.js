@@ -48,11 +48,14 @@ export const postMeta = (p) => ({
   type: "article",
 });
 
-/** Every indexable route with its SEO data. Used for prerendering and sitemap.xml. */
-export const allRoutes = () => [
+/**
+ * Every indexable route with its SEO data. Used for prerendering and
+ * sitemap.xml. The build script passes in the posts it read from disk.
+ */
+export const allRoutes = (postList = posts) => [
   ...Object.keys(staticRoutes).map(pageMeta),
   ...services.map(serviceMeta),
-  ...posts.map(postMeta),
+  ...postList.map(postMeta),
 ];
 
 /** The resolved tag values for one route. */

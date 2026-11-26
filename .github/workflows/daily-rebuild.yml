@@ -1,0 +1,30 @@
+# Rebuilds the live site every morning so scheduled blog posts
+# (posts with a future `date`) go live on their day automatically.
+#
+# One-time setup (see "Scheduling blog posts" in the README):
+#   1. Vercel > Project > Settings > Git > Deploy Hooks: create a hook
+#      for the master branch and copy its URL.
+#   2. GitHub > repo > Settings > Secrets and variables > Actions:
+#      add a secret named VERCEL_DEPLOY_HOOK with that URL.
+# Until the secret exists, this job does nothing.
+name: Daily rebuild
+
+on:
+  schedule:
+    - cron: "0 5 * * *" # 05:00 UTC, which is 8:00 in Nairobi and midnight in New York
+  workflow_dispatch: {}
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger a Vercel deploy
+        env:
+          HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: |
+          if [ -z "$HOOK" ]; then
+            echo "VERCEL_DEPLOY_HOOK secret is not set, skipping."
+            exit 0
+          fi
+          curl -fsS -X POST "$HOOK" > /dev/null
+          echo "Rebuild started."

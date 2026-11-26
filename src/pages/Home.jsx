@@ -7,6 +7,7 @@ import Security from "../components/sections/Security.jsx";
 import { IndustryCard, OtherIndustryCard, ServiceCard } from "../components/sections/Cards.jsx";
 import { ProcessCompact } from "../components/sections/ProcessSteps.jsx";
 import Testimonials from "../components/sections/Testimonials.jsx";
+import { PostCard } from "../components/sections/BlogParts.jsx";
 import { Icon } from "../lib/icons.jsx";
 import { pageMeta } from "../lib/seo.js";
 import { site } from "../data/site.js";
@@ -14,6 +15,7 @@ import { hero, industriesIntro, painPoints, servicesIntro } from "../data/home.j
 import { services } from "../data/services.js";
 import { industries, otherIndustries } from "../data/industries.js";
 import { processIntro, processSteps } from "../data/process.js";
+import { posts } from "../data/blog.js";
 
 /** Illustrative "your week" card in the hero. No numbers, nothing invented. */
 function HeroVisual() {
@@ -145,6 +147,29 @@ export default function Home() {
       <Security tone="tint" />
 
       <Testimonials />
+
+      {/* Latest from the blog (hidden until there are posts) */}
+      {posts.length > 0 && (
+        <Section>
+          <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+            <SectionHeading
+              eyebrow="From the blog"
+              title="Practical ideas for getting your time back"
+              text="Guides on delegation, systems and growth, new every week."
+            />
+            <Button href="/blog" variant="outline" arrow className="self-start lg:self-auto">
+              All posts
+            </Button>
+          </div>
+          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {posts.slice(0, 3).map((post, i) => (
+              <Reveal key={post.slug} delay={i * 80}>
+                <PostCard post={post} as="h3" />
+              </Reveal>
+            ))}
+          </div>
+        </Section>
+      )}
     </>
   );
 }

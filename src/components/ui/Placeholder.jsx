@@ -1,7 +1,11 @@
 import { isPlaceholder, site } from "../../data/site.js";
 
-/** Visible label for placeholder content (testimonials, team, sample posts). */
+/**
+ * Label for placeholder content (testimonials, team). Only ever shown
+ * while previewing with showPlaceholders on, never on the live site.
+ */
 export function PlaceholderBadge({ children = "Placeholder" }) {
+  if (!site.showPlaceholders) return null;
   return (
     <span className="inline-flex items-center rounded-full bg-amber-100 px-2.5 py-0.5 text-xs font-semibold text-amber-900 ring-1 ring-amber-200">
       {children}
@@ -36,7 +40,7 @@ export function SafeLink({ href, children, className = "", ...rest }) {
     return (
       <span
         className={`${className} cursor-default opacity-50`}
-        title={site.showPlaceholders ? `Replace ${href} in src/data/site.js` : "Coming soon"}
+        title="Coming soon"
         role={rest["aria-label"] ? "img" : undefined}
         aria-label={rest["aria-label"]}
       >

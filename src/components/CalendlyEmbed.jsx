@@ -3,13 +3,13 @@ import { isPlaceholder, site } from "../data/site.js";
 
 /**
  * Embeds your Calendly booking page. Set `calendlyUrl` in
- * src/data/site.js. Until then a placeholder box is shown.
+ * src/data/site.js. Until then visitors are asked to email instead.
  */
 export default function CalendlyEmbed() {
   const url = site.calendlyUrl;
 
-  // Live-site fallback while the Calendly link is not set yet.
-  if (isPlaceholder(url) && !site.showPlaceholders) {
+  // Fallback while the Calendly link is not set yet.
+  if (isPlaceholder(url)) {
     return (
       <div className="flex min-h-[420px] flex-col items-center justify-center rounded-2xl border border-ink-200 bg-white p-10 text-center">
         <span className="icon-badge">
@@ -26,21 +26,6 @@ export default function CalendlyEmbed() {
           <Mail className="size-4" aria-hidden="true" />
           {site.email}
         </a>
-      </div>
-    );
-  }
-
-  if (isPlaceholder(url)) {
-    return (
-      <div className="flex min-h-[420px] flex-col items-center justify-center rounded-2xl border-2 border-dashed border-ink-300 bg-white p-10 text-center">
-        <span className="icon-badge">
-          <CalendarCheck className="size-6" aria-hidden="true" />
-        </span>
-        <p className="mt-5 font-display text-xl font-bold text-ink-950">Calendly booking calendar</p>
-        <p className="mt-2 max-w-sm text-sm text-ink-600">
-          Add your Calendly link as <code className="placeholder-chip">calendlyUrl</code> in{" "}
-          <code className="placeholder-chip">src/data/site.js</code> and your booking calendar will appear here.
-        </p>
       </div>
     );
   }

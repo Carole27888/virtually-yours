@@ -97,6 +97,7 @@ export const mainNav = [
   { label: "How It Works", href: "/how-it-works" },
   { label: "Pricing", href: "/pricing" },
   { label: "About", href: "/about" },
+  { label: "Blog", href: "/blog" },
 ];
 
 export const footerNav = {
@@ -105,7 +106,7 @@ export const footerNav = {
     { label: "How It Works", href: "/how-it-works" },
     { label: "Pricing", href: "/pricing" },
     { label: "Careers", href: "/careers" },
-    { label: "Resources", href: "/blog" },
+    { label: "Blog", href: "/blog" },
     { label: "Contact", href: "/contact" },
   ],
   legal: [

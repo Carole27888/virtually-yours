@@ -25,11 +25,7 @@ export function useFormSubmit(endpoint, { validate } = {}) {
 
     if (isPlaceholder(endpoint)) {
       setStatus("error");
-      setError(
-        site.showPlaceholders
-          ? "This form is not connected yet. Add your Formspree endpoint in src/data/site.js (see the README)."
-          : `Sorry, this form is not available right now. Please email us at ${site.email}.`,
-      );
+      setError(`Sorry, this form is not available right now. Please email us at ${site.email}.`);
       return;
     }
 

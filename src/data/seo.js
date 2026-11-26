@@ -41,8 +41,8 @@ export const pageSeo = {
     description: "Join our remote team of virtual assistants and specialists. See open roles, requirements and benefits, and apply online.",
   },
   blog: {
-    title: "Resources",
-    description: "Practical guides on delegation, systems and growth for busy business owners.",
+    title: "Blog",
+    description: "Practical guides on delegation, systems and growth for busy business owners. New posts every week.",
   },
   contact: {
     title: "Contact & Book a Call",

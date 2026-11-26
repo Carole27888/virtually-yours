@@ -44,7 +44,7 @@ export default function Header() {
       <Container className="flex h-18 items-center justify-between gap-6 py-3">
         <Logo dark={!solid} />
 
-        <nav aria-label="Main" className="hidden lg:block">
+        <nav aria-label="Main" className="hidden xl:block">
           <ul className="flex items-center gap-1">
             {mainNav.map((item) => (
               <li key={item.href}>
@@ -79,7 +79,7 @@ export default function Header() {
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label={open ? "Close menu" : "Open menu"}
-            className={`inline-flex size-11 items-center justify-center rounded-full lg:hidden ${
+            className={`inline-flex size-11 items-center justify-center rounded-full xl:hidden ${
               solid ? "text-ink-950 hover:bg-paper-200" : "text-white hover:bg-white/10"
             }`}
           >
@@ -89,7 +89,7 @@ export default function Header() {
       </Container>
 
       {open && (
-        <div id="mobile-menu" className="h-[calc(100dvh-4.5rem)] overflow-y-auto border-t border-ink-200 bg-white lg:hidden">
+        <div id="mobile-menu" className="h-[calc(100dvh-4.5rem)] overflow-y-auto border-t border-ink-200 bg-white xl:hidden">
           <Container className="py-6">
             <nav aria-label="Mobile">
               <ul className="divide-y divide-ink-200">

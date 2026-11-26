@@ -46,7 +46,7 @@ save. The dev server updates the page straight away.
 | `about.js` | Story, mission and values |
 | `careers.js` | Roles, requirements, benefits and application form options |
 | `contact.js` | Contact page text and budget ranges |
-| `blog.js` | Blog posts (2 samples). Each one creates a page at `/blog/<slug>` |
+| `blog.js` | Blog page heading text. The posts themselves are Markdown files in `content/blog/` |
 | `legal.js` | Privacy Policy and Terms of Service |
 
 ### Placeholders
@@ -67,10 +67,48 @@ left. A section with nothing left to show disappears completely.
   to show their initials instead.
 - **Add your founder photo:** save a square photo (at least 800 x 800) as
   `public/images/founder.jpg` and set `photo: "/images/founder.jpg"` in `team.js`.
-- **Add a blog post:** copy a post in `blog.js`, give it a new `slug`, and write the body
-  using the block types listed at the top of the file. Remove `isSample: true`.
+- **Add a blog post:** see "Publishing a blog post" below.
 - **Use a different icon:** pick one at [lucide.dev/icons](https://lucide.dev/icons), add it
   to `src/lib/icons.jsx` (import it and add it to `registry`), then use its name in a data file.
+
+### Publishing a blog post
+
+Each post is one Markdown file in `content/blog/`. To publish:
+
+1. Copy `content/blog/_template.md` and rename the copy using lowercase words and
+   hyphens. The file name becomes the address: `how-to-delegate-email.md` is published
+   at `/blog/how-to-delegate-email`. Do not rename a file after it is live, or old links
+   will break.
+2. Fill in the details at the top (`title`, `date`, `category`, `excerpt`), write the post
+   and delete the template's notes.
+3. Remove the `draft: true` line, then commit and push. The site rebuilds and the post
+   appears on the blog page, on the home page, in the sitemap and in the RSS feed
+   (`/rss.xml`).
+
+**Length:** Google sets no minimum word count, but pages that answer a question fully rank
+better. Aim for 1,000 to 1,500 words. The build prints a warning for any post under 600
+words, or with no excerpt.
+
+**Categories:** keep to a handful (for example Delegation, Systems, Productivity, Hiring,
+Growth). The blog page builds its filter buttons from the categories in use.
+
+**Images:** put them in `public/images/blog/` and add `![Description](/images/blog/name.jpg)`.
+
+### Scheduling blog posts
+
+Give a post a future `date` and push it whenever it is ready. It stays hidden, and out of
+the site's code, until it goes live. Because the site is built ahead of time, a scheduled
+post goes live the first time the site is rebuilt on or after its date.
+`.github/workflows/daily-rebuild.yml` rebuilds the site every day at 05:00 UTC once it is
+set up:
+
+1. In Vercel, open the project, then **Settings > Git > Deploy Hooks**. Create a hook named
+   "Daily rebuild" for the `master` branch and copy the URL.
+2. In GitHub, open the repo, then **Settings > Secrets and variables > Actions > New
+   repository secret**. Name it `VERCEL_DEPLOY_HOOK` and paste the URL.
+
+Until the secret is added, the workflow does nothing, and scheduled posts appear the next
+time you push.
 
 ### Writing rule
 
