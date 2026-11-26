@@ -5,8 +5,8 @@ category: Delegation
 excerpt: If you are always busy but never quite catching up, it might be time to delegate. Here is how to tell.
 image: /images/blog/signs-you-are-ready-to-hire-a-virtual-assistant.jpg
 imageSmall: /images/blog/signs-you-are-ready-to-hire-a-virtual-assistant-sm.jpg
-imageAlt: A desk buried under piles of paper
-imageCredit: Wonderlane
+imageAlt: A busy woman on two phones at a desk covered in papers and sticky notes
+imageCredit: Chu CHU
 ---
 
 Most business owners wait too long to get help. They tell themselves it will be quicker to do it themselves, until the to-do list is running their life. Here are five signs it is time to bring in a virtual assistant.
