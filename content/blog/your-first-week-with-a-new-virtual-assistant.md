@@ -5,8 +5,8 @@ category: Delegation
 excerpt: The first week sets the tone for the whole working relationship. Here is a day-by-day checklist to help your new assistant get up to speed quickly.
 image: /images/blog/your-first-week-with-a-new-virtual-assistant.jpg
 imageSmall: /images/blog/your-first-week-with-a-new-virtual-assistant-sm.jpg
-imageAlt: A video call on a laptop next to a mug of coffee
-imageCredit: Chris Montgomery
+imageAlt: Hands filling in a checklist on a clipboard
+imageCredit: Zulfugar Karimov
 ---
 
 You have found the right assistant. Now what? The first week is where many working relationships are made or broken. If it goes well, your assistant understands your business, knows what to do and starts saving you time quickly. If it is rushed or unclear, you can spend weeks fixing misunderstandings.

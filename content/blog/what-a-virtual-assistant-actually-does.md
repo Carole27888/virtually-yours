@@ -5,8 +5,8 @@ category: Delegation
 excerpt: Many people know they could use help but are not sure what a virtual assistant really does. Here is a clear look at the tasks they handle in a typical week.
 image: /images/blog/what-a-virtual-assistant-actually-does.jpg
 imageSmall: /images/blog/what-a-virtual-assistant-actually-does-sm.jpg
-imageAlt: A woman with long braids working on a laptop at a desk
-imageCredit: Daniel Thomas
+imageAlt: Hands typing on a laptop with a phone on the desk
+imageCredit: Cytonn Photography
 ---
 
 "Virtual assistant" is one of those job titles that means different things to different people. Some picture someone who only answers email. Others imagine a personal assistant who books restaurants. In reality, a good virtual assistant can handle a wide range of business tasks, and the right mix depends on what your business needs.

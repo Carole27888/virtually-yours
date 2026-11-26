@@ -5,8 +5,8 @@ category: Productivity
 excerpt: Doing every task yourself can feel like the cheaper option. Here is a simple way to work out what it is really costing your business.
 image: /images/blog/the-real-cost-of-doing-everything-yourself.jpg
 imageSmall: /images/blog/the-real-cost-of-doing-everything-yourself-sm.jpg
-imageAlt: A stressed woman with her head in her hands at a laptop
-imageCredit: Elisa Ventur
+imageAlt: A hand with a wristwatch working on a laptop
+imageCredit: Clémence Taillez
 ---
 
 When you run your own business, doing everything yourself can feel like the sensible choice. It seems cheaper, you know it will be done your way and you do not have to explain anything to anyone. For a while, it often works.

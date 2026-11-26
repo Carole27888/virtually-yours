@@ -5,8 +5,8 @@ category: Growth
 excerpt: When a potential client reaches out, the first reply often decides who they hire. Here is how to respond quickly without being glued to your phone.
 image: /images/blog/why-fast-replies-win-more-clients.jpg
 imageSmall: /images/blog/why-fast-replies-win-more-clients-sm.jpg
-imageAlt: A woman on a phone call while working at her laptop
-imageCredit: Brandy Kennedy
+imageAlt: A hand holding a phone next to an open laptop
+imageCredit: Plann
 ---
 
 Think about the last time you needed a service. You probably contacted a few businesses, maybe filled in a couple of forms and sent an email or two. Who did you end up talking to first? Very often, it was the business that replied first.
