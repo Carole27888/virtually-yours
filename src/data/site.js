@@ -24,7 +24,7 @@ export const site = {
   },
 
   // Your live domain, no trailing slash. Used for canonical URLs, Open Graph and sitemap.xml.
-  url: "https://virtuallyhandledco.com",
+  url: "https://www.virtuallyhandledco.com",
 
   email: "info@virtuallyhandledco.com",
   location: "Nairobi, Kenya",
@@ -66,6 +66,9 @@ export const site = {
     // CV file uploads need a paid Formspree plan. While this is false, the
     // careers form asks for a link to the CV (Google Drive, Dropbox) instead.
     allowFileUploads: false,
+    // Job applications: paste your Google Form link here (the "Send" link, ending in /viewform).
+    // While this is a [PLACEHOLDER], the Careers page uses the Formspree form above instead.
+    careersGoogleForm: "[GOOGLE FORM LINK]",
   },
 
   // The main call to action used on every page.

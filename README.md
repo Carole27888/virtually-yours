@@ -194,7 +194,7 @@ Every push to GitHub redeploys the site automatically.
   title and description for each link, even though they don't run JavaScript.
 - `sitemap.xml` and `robots.txt` are generated on every build from the data files, so new
   services and blog posts are added automatically. After launch, submit
-  `https://virtuallyhandledco.com/sitemap.xml` in
+  `https://www.virtuallyhandledco.com/sitemap.xml` in
   [Google Search Console](https://search.google.com/search-console).
 - The default share image is `public/og-image.png` (1200 x 630). It currently shows the
   agency name as text. Replace it with a version that includes your logo if you like.
@@ -228,6 +228,9 @@ These are still placeholders. Search the project for `[` to find them.
 
 **Pending items you named**
 
+- [ ] **Careers Google Form:** create the job application form in Google Forms and paste its
+      link as `forms.careersGoogleForm` in `src/data/site.js`. Until then, the Careers page
+      uses the Formspree form, which asks for a link to the CV.
 - [ ] **Social media links:** Instagram, Facebook, LinkedIn, TikTok and X under `socials` in
       `src/data/site.js`. Until each is set, its footer icon shows dimmed and is not clickable.
 

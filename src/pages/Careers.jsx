@@ -1,4 +1,4 @@
-import { MapPin } from "lucide-react";
+import { ExternalLink, MapPin } from "lucide-react";
 import Seo from "../components/Seo.jsx";
 import PageHeader from "../components/ui/PageHeader.jsx";
 import Reveal from "../components/ui/Reveal.jsx";
@@ -7,6 +7,7 @@ import CheckList from "../components/ui/CheckList.jsx";
 import { Section, SectionHeading } from "../components/ui/Section.jsx";
 import { Text } from "../components/ui/Placeholder.jsx";
 import CareersForm from "../components/forms/CareersForm.jsx";
+import { isPlaceholder, site } from "../data/site.js";
 import { Icon } from "../lib/icons.jsx";
 import { pageMeta } from "../lib/seo.js";
 import { benefits, careersIntro, requirements, roles } from "../data/careers.js";
@@ -76,14 +77,58 @@ export default function Careers() {
       {/* Application */}
       <Section id="apply">
         <div className="mx-auto max-w-3xl">
-          <SectionHeading
-            eyebrow="Apply"
-            title="Send us your application"
-            text="Fill in the form below. It takes about five minutes."
-          />
-          <div className="mt-10 rounded-3xl border border-ink-200 bg-white p-6 sm:p-10">
-            <CareersForm />
-          </div>
+          {isPlaceholder(site.forms.careersGoogleForm) ? (
+            <>
+              <SectionHeading
+                eyebrow="Apply"
+                title="Send us your application"
+                text="Fill in the form below. It takes about five minutes."
+              />
+              <div className="mt-10 rounded-3xl border border-ink-200 bg-white p-6 sm:p-10">
+                <CareersForm />
+              </div>
+            </>
+          ) : (
+            <>
+              <SectionHeading
+                eyebrow="Apply"
+                title="Send us your application"
+                text="Our application form takes about ten minutes. Have your CV ready as a PDF or Word file."
+              />
+              <div className="mt-10 rounded-3xl border border-ink-200 bg-white p-6 sm:p-10">
+                <ol className="space-y-4 text-ink-700">
+                  {[
+                    "Open the application form. It opens in a new tab.",
+                    "Sign in with your Google account when asked. This is needed to upload your CV.",
+                    "Tell us about your skills and experience, attach your CV and submit.",
+                  ].map((step, i) => (
+                    <li key={step} className="flex gap-4">
+                      <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-primary-900 font-display text-sm font-bold text-accent-300">
+                        {i + 1}
+                      </span>
+                      <span className="pt-1">{step}</span>
+                    </li>
+                  ))}
+                </ol>
+                <a
+                  href={site.forms.careersGoogleForm}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-8 inline-flex items-center gap-2 rounded-full bg-accent-500 px-7 py-3.5 font-semibold text-white transition hover:bg-accent-600"
+                >
+                  Open the application form
+                  <ExternalLink className="size-4" aria-hidden="true" />
+                </a>
+                <p className="mt-6 text-sm text-ink-500">
+                  Trouble with the form? Email your CV to{" "}
+                  <a href={`mailto:${site.email}`} className="font-semibold text-ink-950 hover:text-accent-700">
+                    {site.email}
+                  </a>{" "}
+                  with the role you are applying for.
+                </p>
+              </div>
+            </>
+          )}
         </div>
       </Section>
     </>
