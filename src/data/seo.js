@@ -12,41 +12,45 @@ import { AGENCY_NAME } from "./site.js";
 
 export const pageSeo = {
   home: {
-    title: `${AGENCY_NAME} | Managed Virtual Assistants & Digital Services`,
-    description: "Trained, vetted virtual assistants and specialists, managed for you. Admin, lead management, social media, ads, CRM automation, e-commerce and websites.",
+    title: `Virtual Assistant Agency | ${AGENCY_NAME}`,
+    description: "Managed virtual assistant agency for small businesses in the US and UK. Remote VAs, executive assistants, lead follow-up, social media and GoHighLevel CRM.",
     fullTitle: true, // do not append the agency name again
   },
   services: {
-    title: "Services",
-    description: "Virtual and executive assistants, lead management, social media, Meta ads, CRM automation, e-commerce support and websites. One managed agency.",
+    title: "Virtual Assistant & Digital Services",
+    description: "Remote virtual and executive assistants, lead management, social media, Meta ads, GoHighLevel and HubSpot CRM setup, e-commerce support and websites.",
   },
   industries: {
-    title: "Industries We Serve",
-    description: "Virtual assistant and digital support for creative studios, real estate, professional services, health and wellness, e-commerce, startups and more.",
+    title: "Virtual Assistants by Industry",
+    description: "Remote VA support for small businesses: creative studios, real estate, professional services, health and wellness, e-commerce stores and startups.",
   },
   howItWorks: {
-    title: "How It Works",
-    description: "Discovery call, needs assessment, VA matching, onboarding with SOPs, then ongoing management and weekly reports. Here is how we work.",
+    title: "How Our Managed VA Service Works",
+    description: "From a free discovery call to a matched, trained virtual assistant: needs assessment, onboarding with SOPs, then ongoing management and weekly reports.",
   },
   pricing: {
-    title: "Pricing",
-    description: "Simple monthly plans for part-time VAs, full-time VAs and dedicated executive assistants, plus custom teams and add-ons.",
+    title: "Virtual Assistant Pricing & Plans",
+    description: "Virtual assistant plans from $550 a month part-time, $1,000 full-time, and dedicated executive assistants from $1,500. Billed monthly, no long contract.",
   },
   about: {
-    title: "About Us",
-    description: `Meet ${AGENCY_NAME}, a managed virtual assistant agency founded in Nairobi, Kenya by executive assistant and developer Carole Mutemi.`,
+    title: "About Our Virtual Assistant Agency",
+    description: `${AGENCY_NAME} is a managed virtual assistant agency based in Nairobi, Kenya, providing remote VAs to small businesses in the US and UK.`,
   },
   careers: {
-    title: "Careers",
-    description: "Join our remote team of virtual assistants and specialists. See open roles, requirements and benefits, and apply online.",
+    title: "Remote Virtual Assistant Jobs",
+    description: "Join our remote team of virtual assistants, executive assistants and specialists. See open roles, requirements and benefits, and apply online.",
   },
   blog: {
-    title: "Blog",
-    description: "Practical guides on delegation, systems and growth for busy business owners. New posts every week.",
+    title: "Delegation & Productivity Blog",
+    description: "Practical guides for small business owners on delegation, working with a virtual assistant, systems and growth. New posts every week.",
+  },
+  faq: {
+    title: "Virtual Assistant FAQs",
+    description: "What a virtual assistant does, what it costs, the hours we work, how we keep your data safe, GoHighLevel support and how to get started.",
   },
   contact: {
-    title: "Contact & Book a Call",
-    description: "Book a free discovery call or send us a message. Tell us what you need and we will recommend the right support.",
+    title: "Book a Free Discovery Call",
+    description: "Book a free 30-minute discovery call or send us a message. Tell us what you need and we will recommend the right virtual assistant support.",
   },
   privacy: {
     title: "Privacy Policy",
@@ -59,5 +63,6 @@ export const pageSeo = {
   notFound: {
     title: "Page Not Found",
     description: "The page you are looking for could not be found.",
+    noindex: true,
   },
 };

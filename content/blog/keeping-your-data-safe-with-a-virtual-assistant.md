@@ -1,5 +1,6 @@
 ---
 title: How to keep your data safe when you work with a virtual assistant
+seoTitle: How to Keep Your Data Safe With a Virtual Assistant
 date: 2026-12-14
 category: Systems
 excerpt: Giving someone access to your email and accounts is a big step. Here are the practical steps that keep your business information protected.

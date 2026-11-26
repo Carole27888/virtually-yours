@@ -1,5 +1,6 @@
 ---
 title: How to handle the holiday rush in your online store without burning out
+seoTitle: How to Handle the Holiday Rush in Your Online Store
 date: 2026-11-27
 category: Growth
 excerpt: Black Friday and the holiday season can bring your busiest weeks of the year. Here is how to keep orders, customers and your own energy under control.

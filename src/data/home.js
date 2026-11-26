@@ -6,6 +6,9 @@
  * appears on the home page.
  */
 
+import { AGENCY_NAME } from "./site.js";
+import { plans } from "./pricing.js";
+
 export const hero = {
   eyebrow: "Virtual assistants and digital services, managed for you",
   title: "Get your time back. We will handle the rest.",
@@ -23,6 +26,12 @@ export const painPoints = {
     { icon: "Shuffle", title: "Systems held together with tape", text: "Spreadsheets, sticky notes and tools that do not talk to each other." },
     { icon: "UserX", title: "Hiring feels risky", text: "Freelancers come and go, and training someone new takes time you do not have." },
   ],
+};
+
+/** Plain summary at the top of /services, so people and AI tools can see what we do at a glance. */
+export const servicesSummary = {
+  title: "What we do",
+  text: `${AGENCY_NAME} provides remote virtual assistants and digital specialists to small businesses in the United States, the United Kingdom and worldwide. We handle admin, inbox and calendar management, lead follow-up and appointment setting, social media, Meta ads, CRM setup and automation in GoHighLevel, HubSpot and Airtable, e-commerce support, and websites. Every client gets a dedicated assistant, managed by our team in Nairobi, Kenya, with plans from ${plans[0].price} a month.`,
 };
 
 export const servicesIntro = {

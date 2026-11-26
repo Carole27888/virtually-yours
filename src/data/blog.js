@@ -37,6 +37,8 @@ export function parsePost(fileName, raw) {
     slug,
     title: data.title || slug.replace(/-/g, " "),
     excerpt: data.excerpt || "",
+    seoTitle: data.seoTitle || "",
+    seoDescription: data.seoDescription || "",
     date: String(data.date || ""),
     author: data.author || site.founder?.name || "",
     category: data.category || "General",

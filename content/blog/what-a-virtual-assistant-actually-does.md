@@ -1,5 +1,7 @@
 ---
 title: What a virtual assistant actually does: a look at a typical week
+seoTitle: What Does a Virtual Assistant Do? A Typical Week
+seoDescription: Not sure what a virtual assistant really does? Here is a clear look at the tasks a VA handles for a busy business owner in a typical week.
 date: 2026-11-26
 category: Delegation
 excerpt: Many people know they could use help but are not sure what a virtual assistant really does. Here is a clear look at the tasks they handle in a typical week.

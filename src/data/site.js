@@ -107,6 +107,7 @@ export const footerNav = {
     { label: "Pricing", href: "/pricing" },
     { label: "Careers", href: "/careers" },
     { label: "Blog", href: "/blog" },
+    { label: "FAQ", href: "/faq" },
     { label: "Contact", href: "/contact" },
   ],
   legal: [

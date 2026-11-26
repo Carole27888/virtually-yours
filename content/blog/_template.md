@@ -1,5 +1,6 @@
 ---
 title: Your post title, written the way people search for it
+seoTitle: Optional shorter title for Google (60 characters max)
 date: 2026-12-01
 category: Delegation
 excerpt: One or two sentences (about 150 characters) shown on the blog page and in Google results.
@@ -28,7 +29,11 @@ HOW TO USE THIS TEMPLATE (delete these notes before publishing)
    right to use, such as your own or free photos from unsplash.com.
    If you leave the image lines out, the post simply has no photo.
    imageSmall is optional; without it the cards use the large photo.
-5. Files starting with _ (like this one) are never published.
+5. Google shows about 60 characters of a title. If your title plus
+   " | Virtually Handled Co." is longer, the brand is dropped. If the
+   title alone is over 60, add a shorter seoTitle line. The build
+   warns you about titles and excerpts that are too long.
+6. Files starting with _ (like this one) are never published.
 
 Start with two or three sentences that tell the reader what they will get from the post.
 

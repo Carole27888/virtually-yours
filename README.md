@@ -231,18 +231,29 @@ Every push to GitHub redeploys the site automatically.
 
 ---
 
-## 7. SEO and link previews
+## 7. SEO, AI search and link previews
 
-- Each page has its own title, meta description, canonical URL and Open Graph / Twitter tags.
-- When you build, `scripts/postbuild.mjs` writes a separate HTML file for every page with
-  those tags already in it. That means LinkedIn, WhatsApp, Facebook and Slack show the right
-  title and description for each link, even though they don't run JavaScript.
-- `sitemap.xml` and `robots.txt` are generated on every build from the data files, so new
-  services and blog posts are added automatically. After launch, submit
-  `https://www.virtuallyhandledco.com/sitemap.xml` in
-  [Google Search Console](https://search.google.com/search-console).
-- The default share image is `public/og-image.png` (1200 x 630). It currently shows the
-  agency name as text. Replace it with a version that includes your logo if you like.
+- **Prerendered pages.** Every build turns each page into finished HTML: the full page text
+  plus its own title, meta description, canonical URL and Open Graph / Twitter tags. Google,
+  Bing, AI tools (ChatGPT, Perplexity, Claude) and link previews on WhatsApp, Facebook and
+  LinkedIn can all read it without running JavaScript. React then takes over in the browser.
+  `src/entry-server.jsx` renders the pages and `scripts/postbuild.mjs` writes them.
+- **Titles and descriptions** for fixed pages are in `src/data/seo.js`. Services and blog
+  posts use their own title and summary, or `seoTitle` / `seoDescription` if set. The build
+  warns if a title is over 60 characters, a description over 155, a page does not have
+  exactly one `<h1>`, or an image has no alt text.
+- **Structured data (JSON-LD)** on every page describes the business (Organization,
+  ProfessionalService with services and prices, WebSite). `/faq` and each service page also
+  carry FAQPage data, and blog posts carry BlogPosting. It is built from the data files in
+  `src/lib/schema.js`, so it always matches the visible site.
+- **FAQ:** questions live in `src/data/faq.js`. All of them show on `/faq`, and the ones
+  marked `onHome: true` show on the home page. The first sentence of every answer must answer
+  the question on its own. Prices and pricing questions come from `pricing.js`.
+- **Generated files** on every build: `sitemap.xml`, `robots.txt`, `rss.xml`, `404.html` and
+  `llms.txt` (a plain-text summary of the business for AI tools). They are generated rather
+  than kept in `public/`, so new pages, posts and price changes are included automatically.
+- The default share image is `public/og-image.png` (1200 x 630). Blog posts use their cover
+  photo.
 
 ---
 
@@ -250,8 +261,8 @@ Every push to GitHub redeploys the site automatically.
 
 ```
 ├── index.html               HTML shell (default meta tags between the seo markers)
-├── vercel.json              clean URLs + send unknown routes to the app
-├── scripts/postbuild.mjs    per-page meta tags, sitemap.xml, robots.txt
+├── vercel.json              clean URLs (unknown addresses get 404.html)
+├── scripts/postbuild.mjs    prerendered pages, structured data, sitemap, robots, RSS, llms.txt
 ├── public/                  favicon, share image, images
 └── src/
     ├── data/                ALL CONTENT (edit these)

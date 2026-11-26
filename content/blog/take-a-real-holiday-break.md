@@ -1,5 +1,6 @@
 ---
 title: How to take a real holiday break without your business stopping
+seoTitle: How to Take a Real Holiday Break as a Business Owner
 date: 2026-12-23
 category: Productivity
 excerpt: Many business owners spend their holidays checking email. Here is how to step away properly while your business keeps running.

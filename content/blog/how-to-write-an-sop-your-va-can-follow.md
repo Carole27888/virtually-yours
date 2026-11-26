@@ -1,5 +1,6 @@
 ---
 title: How to write an SOP your virtual assistant can actually follow
+seoTitle: How to Write an SOP Your Virtual Assistant Can Follow
 date: 2026-02-10
 category: Systems
 excerpt: Clear standard operating procedures are the secret to delegating with confidence. Here is a simple format that works.

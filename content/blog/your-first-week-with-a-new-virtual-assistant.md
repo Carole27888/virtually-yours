@@ -1,5 +1,6 @@
 ---
 title: Your first week with a new virtual assistant: an onboarding checklist
+seoTitle: Onboarding a New Virtual Assistant: First Week Checklist
 date: 2026-12-21
 category: Delegation
 excerpt: The first week sets the tone for the whole working relationship. Here is a day-by-day checklist to help your new assistant get up to speed quickly.

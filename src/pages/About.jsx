@@ -95,6 +95,7 @@ export default function About() {
             <img
               src={founder.photo}
               alt={founder.photoAlt}
+              loading="lazy"
               width="800"
               height="800"
               className="relative aspect-square w-full rounded-3xl object-cover"

@@ -6,7 +6,7 @@ import { Section } from "../components/ui/Section.jsx";
 import { ServiceCard } from "../components/sections/Cards.jsx";
 import { pageMeta } from "../lib/seo.js";
 import { services } from "../data/services.js";
-import { servicesIntro } from "../data/home.js";
+import { servicesIntro, servicesSummary } from "../data/home.js";
 
 export default function Services() {
   return (
@@ -15,6 +15,10 @@ export default function Services() {
       <PageHeader eyebrow="Services" title={servicesIntro.title} text={servicesIntro.text} />
 
       <Section>
+        <div className="mb-14 max-w-3xl">
+          <h2 className="text-3xl font-bold sm:text-4xl">{servicesSummary.title}</h2>
+          <p className="mt-5 text-lg leading-relaxed text-ink-700">{servicesSummary.text}</p>
+        </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((s, i) => (
             <Reveal key={s.slug} delay={(i % 3) * 80}>

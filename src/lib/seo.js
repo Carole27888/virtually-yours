@@ -19,13 +19,22 @@ export const staticRoutes = {
   about: "/about",
   careers: "/careers",
   blog: "/blog",
+  faq: "/faq",
   contact: "/contact",
   privacy: "/privacy",
   terms: "/terms",
 };
 
-export const formatTitle = ({ title, fullTitle }) =>
-  fullTitle ? title : `${title} | ${AGENCY_NAME}`;
+/** Google shows about 60 characters of a title. */
+export const MAX_TITLE = 60;
+export const MAX_DESCRIPTION = 155;
+
+/** Adds " | Agency name" unless the result would be too long for Google. */
+export const formatTitle = ({ title, fullTitle }) => {
+  if (fullTitle) return title;
+  const withName = `${title} | ${AGENCY_NAME}`;
+  return withName.length <= MAX_TITLE ? withName : title;
+};
 
 export const absoluteUrl = (path = "/") =>
   site.url.replace(/\/$/, "") + (path === "/" ? "/" : path);
@@ -36,14 +45,14 @@ export const pageMeta = (key) => ({
 });
 
 export const serviceMeta = (s) => ({
-  title: s.title,
-  description: s.summary,
+  title: s.seoTitle || s.title,
+  description: s.seoDescription || s.summary,
   path: `/services/${s.slug}`,
 });
 
 export const postMeta = (p) => ({
-  title: p.title,
-  description: p.excerpt,
+  title: p.seoTitle || p.title,
+  description: p.seoDescription || p.excerpt,
   path: `/blog/${p.slug}`,
   type: "article",
   ...(p.image ? { image: p.image, imageWidth: 1600, imageHeight: 840 } : {}),

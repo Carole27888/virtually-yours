@@ -1,5 +1,6 @@
 ---
 title: Freelancer, virtual assistant or managed agency: which is right for you?
+seoTitle: Freelancer, VA or Managed Agency: Which Is Right?
 date: 2026-12-11
 category: Hiring
 excerpt: There is more than one way to get help with your business. Here is an honest comparison of the main options, so you can choose the one that fits.

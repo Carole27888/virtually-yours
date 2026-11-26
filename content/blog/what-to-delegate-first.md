@@ -1,5 +1,6 @@
 ---
 title: What to delegate first: a simple guide for busy business owners
+seoTitle: What to Delegate First: A Guide for Business Owners
 date: 2026-12-02
 category: Delegation
 excerpt: You know you need help, but where do you start? Here is a practical way to choose the first tasks to hand off, and the ones to keep.

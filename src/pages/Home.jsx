@@ -16,6 +16,8 @@ import { services } from "../data/services.js";
 import { industries, otherIndustries } from "../data/industries.js";
 import { processIntro, processSteps } from "../data/process.js";
 import { posts } from "../data/blog.js";
+import { homeFaqs } from "../data/faq.js";
+import Accordion from "../components/ui/Accordion.jsx";
 
 /** Illustrative "your week" card in the hero. No numbers, nothing invented. */
 function HeroVisual() {
@@ -148,9 +150,22 @@ export default function Home() {
 
       <Testimonials />
 
+      {/* FAQ (full list on /faq) */}
+      <Section>
+        <div className="grid gap-12 lg:grid-cols-[1fr_1.6fr]">
+          <div>
+            <SectionHeading eyebrow="FAQ" title="Questions business owners ask us" />
+            <Button href="/faq" variant="outline" arrow className="mt-8">
+              All questions
+            </Button>
+          </div>
+          <Accordion items={homeFaqs} />
+        </div>
+      </Section>
+
       {/* Latest from the blog (hidden until there are posts) */}
       {posts.length > 0 && (
-        <Section>
+        <Section tone="tint">
           <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
             <SectionHeading
               eyebrow="From the blog"

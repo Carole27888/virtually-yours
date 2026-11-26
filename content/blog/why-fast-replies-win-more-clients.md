@@ -1,5 +1,6 @@
 ---
 title: Why fast replies win more clients, and how to make them happen
+seoTitle: Why Fast Replies Win More Clients
 date: 2026-12-09
 category: Growth
 excerpt: When a potential client reaches out, the first reply often decides who they hire. Here is how to respond quickly without being glued to your phone.
