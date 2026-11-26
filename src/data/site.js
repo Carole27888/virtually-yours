@@ -62,13 +62,14 @@ export const site = {
   // Formspree endpoints. Create two forms at https://formspree.io and paste the URLs here.
   forms: {
     contact: "https://formspree.io/f/mjywrdzl",
-    careers: "https://formspree.io/f/xaeojkzk",
+    // Not used while careersGoogleForm (below) is set. Kept as a fallback.
+    careers: "https://formspree.io/f/[CAREERS_FORM_ID]",
     // CV file uploads need a paid Formspree plan. While this is false, the
     // careers form asks for a link to the CV (Google Drive, Dropbox) instead.
     allowFileUploads: false,
     // Job applications: paste your Google Form link here (the "Send" link, ending in /viewform).
     // While this is a [PLACEHOLDER], the Careers page uses the Formspree form above instead.
-    careersGoogleForm: "[GOOGLE FORM LINK]",
+    careersGoogleForm: "https://docs.google.com/forms/d/e/1FAIpQLSdJ-UHfLihwc9WnhuolDbHHD0cMxBIvEjwSXTBSLVArJ9rxHA/viewform",
   },
 
   // The main call to action used on every page.

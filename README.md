@@ -228,9 +228,6 @@ These are still placeholders. Search the project for `[` to find them.
 
 **Pending items you named**
 
-- [ ] **Careers Google Form:** create the job application form in Google Forms and paste its
-      link as `forms.careersGoogleForm` in `src/data/site.js`. Until then, the Careers page
-      uses the Formspree form, which asks for a link to the CV.
 - [ ] **Social media links:** Instagram, Facebook, LinkedIn, TikTok and X under `socials` in
       `src/data/site.js`. Until each is set, its footer icon shows dimmed and is not clickable.
 
