@@ -10,8 +10,12 @@
 name: Daily rebuild
 
 on:
+  # GitHub often starts scheduled jobs late (sometimes by an hour), most of
+  # all on the hour, so this runs twice at quiet minutes. Times are UTC:
+  # 03:17 and 04:47 UTC are 6:17 and 7:47 in Nairobi.
   schedule:
-    - cron: "0 5 * * *" # 05:00 UTC, which is 8:00 in Nairobi and midnight in New York
+    - cron: "17 3 * * *"
+    - cron: "47 4 * * *"
   workflow_dispatch: {}
 
 jobs:

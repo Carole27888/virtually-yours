@@ -106,8 +106,8 @@ free use on business websites.
 Give a post a future `date` and push it whenever it is ready. It stays hidden, and out of
 the site's code, until it goes live. Because the site is built ahead of time, a scheduled
 post goes live the first time the site is rebuilt on or after its date.
-`.github/workflows/daily-rebuild.yml` rebuilds the site every day at 05:00 UTC once it is
-set up:
+`.github/workflows/daily-rebuild.yml` rebuilds the site twice every morning (6:17 and 7:47
+Nairobi time) once it is set up. GitHub sometimes starts these a little late:
 
 1. In Vercel, open the project, then **Settings > Git > Deploy Hooks**. Create a hook named
    "Daily rebuild" for the `master` branch and copy the URL.
