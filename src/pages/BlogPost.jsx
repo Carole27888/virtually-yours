@@ -25,7 +25,10 @@ function articleSchema(post) {
     headline: post.title,
     description: post.excerpt,
     datePublished: post.date,
-    author: { "@type": "Person", name: post.author },
+    author:
+      post.author === AGENCY_NAME
+        ? { "@type": "Organization", name: AGENCY_NAME, url: absoluteUrl("/") }
+        : { "@type": "Person", name: post.author },
     publisher: { "@type": "Organization", name: AGENCY_NAME, logo: { "@type": "ImageObject", url: absoluteUrl(site.logo.src) } },
     mainEntityOfPage: absoluteUrl(`/blog/${post.slug}`),
     image: absoluteUrl(post.image || site.ogImage),

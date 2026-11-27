@@ -10,7 +10,7 @@
  * A post is only shown once its `date` has arrived and it is not
  * marked `draft: true`.
  */
-import { site } from "./site.js";
+import { AGENCY_NAME } from "./site.js";
 import { parseBlocks, parseFrontmatter, plainText } from "../lib/markdown.js";
 
 /** Google gives no minimum, but posts under this many words rarely rank. The build warns below it. */
@@ -40,7 +40,8 @@ export function parsePost(fileName, raw) {
     seoTitle: data.seoTitle || "",
     seoDescription: data.seoDescription || "",
     date: String(data.date || ""),
-    author: data.author || site.founder?.name || "",
+    // Posts are published under the agency name unless a post sets its own `author`.
+    author: data.author || AGENCY_NAME,
     category: data.category || "General",
     draft: data.draft === true,
     image: data.image || "",

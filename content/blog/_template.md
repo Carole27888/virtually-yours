@@ -9,6 +9,7 @@ imageSmall: /images/blog/your-post-file-name-sm.jpg
 imageAlt: Describe the photo in a few words, for screen readers
 imageCredit: Photographer's name
 draft: true
+# author: Leave out to publish as Virtually Handled Co., or add a person's name
 ---
 
 HOW TO USE THIS TEMPLATE (delete these notes before publishing)
