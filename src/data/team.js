@@ -13,8 +13,8 @@ import { AGENCY_NAME } from "./site.js";
 export const founder = {
   name: "Carole Mutemi",
   role: `Founder, ${AGENCY_NAME}`,
-  location: "Nairobi, Kenya",
-  photo: "/images/founder.jpg",
+  // Leave empty to hide the photo. Put a new photo in public/images/ and give its path, e.g. "/images/founder.jpg".
+  photo: "",
   photoAlt: "Portrait of Carole Mutemi, founder",
   bio: [
     "Carole is an executive assistant and software developer with more than three years of experience supporting international clients.",

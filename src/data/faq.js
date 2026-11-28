@@ -65,8 +65,8 @@ export const faqs = [
     a: "We work with busy business owners, founders and small teams, including creative studios and wedding photographers, real estate professionals, professional services firms, health and wellness businesses, e-commerce stores and startups. If your industry is not listed, we can still help.",
   },
   {
-    q: "Where are you based?",
-    a: `${AGENCY_NAME} is based in ${site.location}. Our assistants work remotely from across Africa, and we serve clients worldwide, covering US and UK business hours.`,
+    q: "Where is your team based?",
+    a: `${AGENCY_NAME} is a fully remote team, with assistants working from across Africa, and we serve clients worldwide, covering US and UK business hours.`,
   },
   {
     q: "Will I work with the same assistant every day?",

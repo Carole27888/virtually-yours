@@ -13,7 +13,7 @@ export const privacyPolicy = {
   title: "Privacy Policy",
   lastUpdated: "17 November 2026",
   sections: [
-    { heading: "Who we are", body: [`${AGENCY_NAME} ("we", "us") is a virtual assistant and digital services agency based in ${site.location}. You can contact us at ${site.email}.`] },
+    { heading: "Who we are", body: [`${AGENCY_NAME} ("we", "us") is a virtual assistant and digital services agency. You can contact us at ${site.email}.`] },
     { heading: "Information we collect", body: ["We collect the information you choose to give us. Through our contact form this is your name, email address, business name, the services you are interested in, your budget range and your message. Through our job application form this is your name, email address, country, skills, experience, portfolio link and CV. If you book a call, Calendly collects the details you enter when booking."] },
     { heading: "How we use your information", body: ["We use your information to reply to your inquiry, arrange and hold discovery calls, provide the services you engage us for, and review job applications. We do not sell your information or use it for unrelated marketing."] },
     { heading: "Third-party services", body: ["We use trusted third parties to run this website: Formspree to receive contact form messages, Calendly to schedule calls and Google Forms to receive job applications. If you message us on WhatsApp, your messages are handled by WhatsApp. Each processes your information under its own privacy policy."] },

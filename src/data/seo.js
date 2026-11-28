@@ -34,7 +34,7 @@ export const pageSeo = {
   },
   about: {
     title: "About Our Virtual Assistant Agency",
-    description: `${AGENCY_NAME} is a managed virtual assistant agency based in Nairobi, Kenya, providing remote VAs to small businesses in the US and UK.`,
+    description: `${AGENCY_NAME} is a managed virtual assistant agency providing trained, vetted remote VAs and specialists to small businesses in the US and UK.`,
   },
   careers: {
     title: "Remote Virtual Assistant Jobs",

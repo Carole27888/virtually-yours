@@ -1,4 +1,4 @@
-import { Clock, Mail, MapPin } from "lucide-react";
+import { Clock, Globe, Mail } from "lucide-react";
 import Seo from "../components/Seo.jsx";
 import PageHeader from "../components/ui/PageHeader.jsx";
 import { Section, SectionHeading } from "../components/ui/Section.jsx";
@@ -77,12 +77,9 @@ export default function Contact() {
               )}
               <li className="flex items-center gap-3">
                 <span className="icon-badge size-10">
-                  <MapPin className="size-5" aria-hidden="true" />
+                  <Globe className="size-5" aria-hidden="true" />
                 </span>
-                <span>
-                  <span className="block font-medium text-ink-950">{site.location}</span>
-                  <span className="block text-sm text-ink-600">{site.serviceArea}</span>
-                </span>
+                <span className="font-medium text-ink-950">{site.serviceArea}</span>
               </li>
               <li className="flex items-center gap-3">
                 <span className="icon-badge size-10 shrink-0">

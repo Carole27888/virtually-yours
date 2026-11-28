@@ -27,7 +27,6 @@ export const site = {
   url: "https://www.virtuallyhandledco.com",
 
   email: "info@virtuallyhandledco.com",
-  location: "Nairobi, Kenya",
   serviceArea: "Serving clients worldwide",
   hours: "Monday to Friday, covering US and UK business hours. Weekends if needed.",
 

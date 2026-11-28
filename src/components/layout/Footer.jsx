@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { Clock, Globe, Mail, MapPin } from "lucide-react";
+import { Clock, Globe, Mail } from "lucide-react";
 import Logo from "../ui/Logo.jsx";
 import { Container } from "../ui/Section.jsx";
 import { SafeLink, Text } from "../ui/Placeholder.jsx";
@@ -60,10 +60,6 @@ export default function Footer() {
                   </a>
                 </li>
               )}
-              <li className="flex items-center gap-2.5">
-                <MapPin className="size-4 text-accent-400" aria-hidden="true" />
-                {site.location}
-              </li>
               <li className="flex items-center gap-2.5">
                 <Globe className="size-4 text-accent-400" aria-hidden="true" />
                 {site.serviceArea}

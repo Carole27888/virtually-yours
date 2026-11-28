@@ -168,12 +168,12 @@ const planLine = (p) =>
   `- **${p.name}** (${p.tagline}): ${p.pricePrefix ? `${p.pricePrefix.toLowerCase()} ` : ""}${p.price}${p.period}${p.hours ? `, ${p.hours.toLowerCase()}` : ""}. ${p.description}`;
 const llms = `# ${AGENCY_NAME}
 
-> ${AGENCY_NAME} is a managed virtual assistant agency based in ${site.location}. It provides trained, vetted remote virtual assistants, executive assistants and digital specialists to busy business owners and small businesses, mainly in the United States and United Kingdom. Each client gets a dedicated assistant, with an agency team behind them for training, quality checks and continuity.
+> ${AGENCY_NAME} is a managed virtual assistant agency with a fully remote team. It provides trained, vetted remote virtual assistants, executive assistants and digital specialists to busy business owners and small businesses, mainly in the United States and United Kingdom. Each client gets a dedicated assistant, with an agency team behind them for training, quality checks and continuity.
 
 ## Key facts
 
 - Website: ${absoluteUrl("/")}
-- Based in: ${site.location}. Works remotely with clients worldwide, mainly in the US and UK.
+- Fully remote team. Works with clients worldwide, mainly in the US and UK.
 - Hours: ${site.hours}
 - Founder: ${site.founder.name}
 - Email: ${site.email}

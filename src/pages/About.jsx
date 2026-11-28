@@ -89,7 +89,8 @@ export default function About() {
 
       {/* Founder */}
       <Section>
-        <div className="grid items-center gap-12 lg:grid-cols-[1fr_1.4fr] lg:gap-20">
+        <div className={founder.photo ? "grid items-center gap-12 lg:grid-cols-[1fr_1.4fr] lg:gap-20" : "max-w-3xl"}>
+          {founder.photo && (
           <Reveal className="relative mx-auto w-full max-w-md">
             <div className="absolute inset-0 hidden translate-x-4 translate-y-4 rounded-3xl bg-primary-900 sm:block" aria-hidden="true" />
             <img
@@ -101,11 +102,12 @@ export default function About() {
               className="relative aspect-square w-full rounded-3xl object-cover"
             />
           </Reveal>
+          )}
           <Reveal delay={120}>
             <p className="eyebrow">Meet the founder</p>
             <h2 className="mt-4 text-3xl font-bold sm:text-4xl">{founder.name}</h2>
             <p className="mt-2 font-medium text-accent-700">
-              {founder.role} · {founder.location}
+              {founder.role}
             </p>
             <div className="mt-6 space-y-4 text-lg leading-relaxed text-ink-700">
               {founder.bio.map((p) => (

@@ -8,7 +8,7 @@ import { AGENCY_NAME } from "./site.js";
 export const aboutIntro = {
   eyebrow: "About us",
   title: "Skilled assistants, real systems and a team that has your back",
-  text: `${AGENCY_NAME} is a managed virtual assistant agency based in Nairobi, Kenya. We provide trained, vetted remote virtual assistants, executive assistants and digital specialists to busy business owners and small businesses, mainly in the United States and United Kingdom.`,
+  text: `${AGENCY_NAME} is a managed virtual assistant agency. We provide trained, vetted remote virtual assistants, executive assistants and digital specialists to busy business owners and small businesses, mainly in the United States and United Kingdom.`,
 };
 
 export const story = {
