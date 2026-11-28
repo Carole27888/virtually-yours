@@ -53,7 +53,7 @@ export const faqs = [
   },
   {
     q: "Do you work with GoHighLevel?",
-    a: `Yes, we set up and manage GoHighLevel, as well as HubSpot and Airtable. Our CRM setup and automation service covers pipelines, workflows, integrations and training, and a one-off CRM setup starts ${crmSetup ? crmSetup.price.replace(/^From/, "from") : "at an agreed price"}. A virtual assistant can then run and maintain the system for you.`,
+    a: `Yes, we set up and manage GoHighLevel, as well as HubSpot, Airtable and other CRM platforms. Our CRM setup and automation service covers pipelines, workflows, integrations and training, and a one-off CRM setup starts ${crmSetup ? crmSetup.price.replace(/^From/, "from") : "at an agreed price"}. A virtual assistant can then run and maintain the system for you.`,
     onHome: true,
   },
   {
@@ -66,7 +66,7 @@ export const faqs = [
   },
   {
     q: "Where are you based?",
-    a: `${AGENCY_NAME} is based in ${site.location} and works remotely with clients worldwide, covering US and UK business hours.`,
+    a: `${AGENCY_NAME} is based in ${site.location}. Our assistants work remotely from across Africa, and we serve clients worldwide, covering US and UK business hours.`,
   },
   {
     q: "Will I work with the same assistant every day?",

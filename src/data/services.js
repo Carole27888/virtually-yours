@@ -149,11 +149,11 @@ export const services = [
     title: "CRM Setup & Automation",
     icon: "Workflow",
     summary:
-      "GoHighLevel, Airtable and HubSpot set up properly, with workflows and integrations that do the busywork for you.",
+      "Your CRM set up properly, from GoHighLevel and HubSpot to Airtable or whatever you use, with workflows that do the busywork for you.",
     intro:
       "A good CRM is the difference between a business that runs on memory and one that runs on systems. We set up, clean up and automate your CRM so every lead, client and task has a clear place and next step.",
     included: [
-      "CRM setup in GoHighLevel, HubSpot or Airtable",
+      "CRM setup in GoHighLevel, HubSpot, Airtable or the platform you already use",
       "Pipeline and stage design that matches how you actually sell",
       "Automated email and SMS follow-up workflows",
       "Forms, booking calendars and contracts connected to your CRM",

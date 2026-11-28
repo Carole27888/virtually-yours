@@ -14,7 +14,7 @@ export const hero = {
   title: "Get your time back. We will handle the rest.",
   text: "Trained, vetted virtual assistants and specialists, backed by a team that manages onboarding, SOPs, quality and weekly reporting. You get the support. We make sure it works.",
   secondaryCta: { label: "Explore our services", href: "/services" },
-  trustLine: "Supporting international clients from Nairobi, Kenya",
+  trustLine: "Supporting business owners in the US, UK and worldwide",
 };
 
 export const painPoints = {
@@ -31,7 +31,7 @@ export const painPoints = {
 /** Plain summary at the top of /services, so people and AI tools can see what we do at a glance. */
 export const servicesSummary = {
   title: "What we do",
-  text: `${AGENCY_NAME} provides remote virtual assistants and digital specialists to small businesses in the United States, the United Kingdom and worldwide. We handle admin, inbox and calendar management, lead follow-up and appointment setting, social media, Meta ads, CRM setup and automation in GoHighLevel, HubSpot and Airtable, e-commerce support, and websites. Every client gets a dedicated assistant, managed by our team in Nairobi, Kenya, with plans from ${plans[0].price} a month.`,
+  text: `${AGENCY_NAME} provides remote virtual assistants and digital specialists to small businesses in the United States, the United Kingdom and worldwide. We handle admin, inbox and calendar management, lead follow-up and appointment setting, social media, Meta ads, CRM setup and automation in GoHighLevel, HubSpot, Airtable or whichever CRM you use, e-commerce support, and websites. Every client gets a dedicated assistant, managed by our team, with plans from ${plans[0].price} a month.`,
 };
 
 export const servicesIntro = {

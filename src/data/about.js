@@ -22,7 +22,7 @@ export const story = {
 
 export const mission = {
   title: "Our mission",
-  text: "To give business owners their time back with dependable, well-managed support, and to create meaningful remote careers for skilled professionals in Kenya and beyond.",
+  text: "To give business owners their time back with dependable, well-managed support, and to create meaningful remote careers for skilled professionals across Africa and beyond.",
 };
 
 export const values = [

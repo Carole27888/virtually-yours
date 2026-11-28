@@ -85,7 +85,7 @@ export const addOns = [
   {
     name: "CRM setup",
     price: "From $250",
-    description: "GoHighLevel, HubSpot or Airtable set up with pipelines, automations and training.",
+    description: "Your CRM (GoHighLevel, HubSpot, Airtable or another platform) set up with pipelines, automations and training.",
     icon: "Workflow",
   },
   {

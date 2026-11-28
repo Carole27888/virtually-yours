@@ -18,7 +18,7 @@ export const pageSeo = {
   },
   services: {
     title: "Virtual Assistant & Digital Services",
-    description: "Remote virtual and executive assistants, lead management, social media, Meta ads, GoHighLevel and HubSpot CRM setup, e-commerce support and websites.",
+    description: "Remote virtual and executive assistants, lead management, social media, Meta ads, CRM setup and automation, e-commerce support and websites.",
   },
   industries: {
     title: "Virtual Assistants by Industry",

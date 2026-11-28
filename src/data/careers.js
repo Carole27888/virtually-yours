@@ -43,7 +43,7 @@ export const roles = [
     title: "CRM & Automation Specialist",
     type: "Part-time or full-time",
     location: "Remote",
-    summary: "Build and maintain CRMs and workflows in GoHighLevel, HubSpot and Airtable.",
+    summary: "Build and maintain CRMs and workflows in GoHighLevel, HubSpot, Airtable and other platforms.",
   },
   {
     title: "E-commerce Assistant",
