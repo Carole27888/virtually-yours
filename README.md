@@ -106,16 +106,18 @@ free use on business websites.
 Give a post a future `date` and push it whenever it is ready. It stays hidden, and out of
 the site's code, until it goes live. Because the site is built ahead of time, a scheduled
 post goes live the first time the site is rebuilt on or after its date.
-`.github/workflows/daily-rebuild.yml` rebuilds the site twice every morning (6:17 and 7:47
-Nairobi time) once it is set up. GitHub sometimes starts these a little late:
+Vercel Cron rebuilds the site every morning between 6:00 and 7:00 Nairobi time: it calls
+`api/rebuild.js` (scheduled in `vercel.json`), which triggers the deploy hook. Setup:
 
 1. In Vercel, open the project, then **Settings > Git > Deploy Hooks**. Create a hook named
    "Daily rebuild" for the `master` branch and copy the URL.
-2. In GitHub, open the repo, then **Settings > Secrets and variables > Actions > New
-   repository secret**. Name it `VERCEL_DEPLOY_HOOK` and paste the URL.
+2. In Vercel, **Settings > Environment Variables**, add `VERCEL_DEPLOY_HOOK` (the hook URL)
+   and `CRON_SECRET` (any long random text), then redeploy.
+3. Check it under **Settings > Cron Jobs**, where **Run** starts it by hand.
 
-Until the secret is added, the workflow does nothing, and scheduled posts appear the next
-time you push.
+`.github/workflows/daily-rebuild.yml` is a backup that does the same from GitHub, using a
+repository secret named `VERCEL_DEPLOY_HOOK`. GitHub often starts these late or skips them,
+so do not rely on it alone. Without either, scheduled posts appear the next time you push.
 
 ### Writing rule
 
